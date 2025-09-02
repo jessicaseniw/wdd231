@@ -1,0 +1,104 @@
+/* small.css - base styles for mobile-first design */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header img {
+    width: 80px;
+    border-radius: 0%;
+}
+
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+main {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    background-color: white;
+}
+
+.completed {
+    background-color: #d1f7d6;
+    border-left: 5px solid #2ecc71;
+}
+
+.not-completed {
+    background-color: #f7d6d6;
+    border-left: 5px solid #e74c3c;
+}

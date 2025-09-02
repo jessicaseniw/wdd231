@@ -1,0 +1,66 @@
+/* large.css - styles for larger screens (tablet and desktop) */
+
+header {
+    background-color: #020e42;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+section#course_work {
+    background-color: #f4f7fa;
+    border-radius: 8px;
+    box-shadow: 15px 2px 8px rgba(2, 14, 66, 0.08);
+    padding: 0px 0px;
+    margin: 32px auto;
+    /* Centraliza o bloco, remove margens laterais */
+    max-width: 900px;
+}
+
+section#course_work h2 {
+    background-color: #020e42;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(2, 14, 66, 0.05);
+}
+
+header img {
+    border-radius: 10%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: #020e42;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border: none;
+}
+
+footer img {
+    width: 20px;
+    height: 12px;
+}
