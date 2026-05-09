@@ -4,53 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course homepage for Jessica Seniw Borges">
-    <meta name="author" content="Jessica Seniw Borges">
-    <title>Jessica Seniw Borges | Course Homepage</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+    <title>Chamber of Commerce</title>
+    <meta
+        description="The Chamber of Commerce is a non-profit organization that represents the interests of businesses in a community. It provides resources, networking opportunities, and advocacy for its members. The Chamber of Commerce works to promote economic growth and development in the area, and it often collaborates with local government and other organizations to achieve its goals.">
+    <meta author="Jéssica Seniw">
 </head>
 
 <body>
     <header>
-        <img src="images/me.jpg" alt="Profile picture of Jessica Seniw Borges">
-        <span>
-            <h1>Jéssica Seniw Borges</h1>
-        </span>
+        <p>Chamber of Commerce</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#chamber">Chamber</a></li>
+                <li><a href="#final">Final</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#chumber">Chumber</a></li>
-            <li><a href="#final">Final</a></li>
-            <li><a href="https://github.com/jessicaseniw/wdd231" target="_blank">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/jessicaseniwborges/" target="_blank">LinkedIn</a></li>
-        </ul>
-    </nav>
     <main>
         <h1>Home</h1>
-        <section id="course_work">
-            <h2>Course Work</h2>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p>
-        </section>
-
-        <section id="mycity">
-            <h2>Porto Alegre, Brazil</h2>
-            <img src="images/mycity.jpeg" alt="Porto Alegre, Brazil" class="city-image">
-            <p>Capital of Southern of Brazil</p>
-        </section>
-        <footer>
-            <p>&copy;2025 Jéssica Seniw Borges | Brazil <img src="images/brazil-flag.jpg" alt="brazil-flag"></p>
-            <p>Last updated: <span id="last-updated"></span></p>
-            <script>
-                document.getElementById('last-updated').textContent = document.lastModified;
-            </script>
-        </footer>
+        <class section id="about_me">
+            <h2>About me</h2>
+            <p>My name is Jéssica Seniw, and I am a student at the Brigham Young University. I am currently studying
+                Software Development, and I have a passion for web development. I have experience with HTML, CSS, and
+                JavaScript, and I am always eager to learn new technologies and improve my skills.</p>
+        </class>
+        <class section id="stud_photo">
+            <img src="images/me.jpg" alt="Student Photo">
+        </class>
+        <class section id="courses">
+            <button>
+                <p>All</p>
+            </button>
+            <button>
+                <p>CSE</p>
+            </button>
+            <button>
+                <p>WDD</p>
+            </button>
+            <button>
+                <p>WDD130</p>
+            </button>
+            <button>
+                <p>WDD131</p>
+            </button>
+            <button>
+                <p>WDD231</p>
+            </button>
+        </class>
+        <p>The total credits for course listed above is 6.</p>
+    </main>
+    <footer>
+        <img src="images/linkedin.png" alt="LinkedIn" onclick="window.location.href='https://www.linkedin.com';">
+        <img src="images/github.png" alt="GitHub" onclick="window.location.href='https://github.com';">
+        <img src="images/x.png" alt="X" onclick="window.location.href='https://twitter.com';">
+        <p>&copy; 2026 · Jéssica Seniw · Porto Alegre, BR.</p>
+        <p id="last-modification">Last Modification: </p>
+    </footer>
+    <script>
+        document.getElementById('last-modification').textContent = 'Last Modification: ' + document.lastModified;
+    </script>
 </body>
 
 </html>
