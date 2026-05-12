@@ -4,67 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
-    <meta
-        description="The Chamber of Commerce is a non-profit organization that represents the interests of businesses in a community. It provides resources, networking opportunities, and advocacy for its members. The Chamber of Commerce works to promote economic growth and development in the area, and it often collaborates with local government and other organizations to achieve its goals.">
-    <meta author="Jéssica Seniw">
+    <title>Home | WDD 131</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
 </head>
 
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header>
-        <p>Chamber of Commerce</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#chamber">Chamber</a></li>
-                <li><a href="#final">Final</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="navigation">
+            <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- ================= MAIN ================= -->
     <main>
-        <h1>Home</h1>
-        <class section id="about_me">
-            <h2>About me</h2>
-            <p>My name is Jéssica Seniw, and I am a student at the Brigham Young University. I am currently studying
-                Software Development, and I have a passion for web development. I have experience with HTML, CSS, and
-                JavaScript, and I am always eager to learn new technologies and improve my skills.</p>
-        </class>
-        <class section id="stud_photo">
-            <img src="images/me.jpg" alt="Student Photo">
-        </class>
-        <class section id="courses">
-            <button>
-                <p>All</p>
-            </button>
-            <button>
-                <p>CSE</p>
-            </button>
-            <button>
-                <p>WDD</p>
-            </button>
-            <button>
-                <p>WDD130</p>
-            </button>
-            <button>
-                <p>WDD131</p>
-            </button>
-            <button>
-                <p>WDD231</p>
-            </button>
-        </class>
-        <p>The total credits for course listed above is 6.</p>
+
     </main>
+
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <img src="images/linkedin.png" alt="LinkedIn" onclick="window.location.href='https://www.linkedin.com';">
-        <img src="images/github.png" alt="GitHub" onclick="window.location.href='https://github.com';">
-        <img src="images/x.png" alt="X" onclick="window.location.href='https://twitter.com';">
-        <p>&copy; 2026 · Jéssica Seniw · Porto Alegre, BR.</p>
-        <p id="last-modification">Last Modification: </p>
+
     </footer>
-    <script>
-        document.getElementById('last-modification').textContent = 'Last Modification: ' + document.lastModified;
-    </script>
+
 </body>
 
 </html>

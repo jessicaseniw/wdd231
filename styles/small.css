@@ -1,104 +1,87 @@
-/* small.css - base styles for mobile-first design */
+/* ================= Global Reset ================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+html,
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
+/* ================= Navigation ================= */
 
-header img {
-    width: 80px;
-    border-radius: 0%;
-}
+.navigation {
+    background-color: #0f172a;
+    /* dark navy */
+    color: #ffffff;
+    padding: 1rem 1.25rem;
+    position: relative;
 
-nav {
-    background-color: #34495e;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-nav li {
-    margin: 1rem 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f39c12;
-}
-
-main {
-    padding: 1.5rem;
-    text-align: center;
-}
-
-section {
-    margin: 2rem 0;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    background-color: #2980b9;
-    color: white;
+/* Hamburger button */
+.navigation button {
+    font-size: 1.75rem;
+    background: none;
     border: none;
-    border-radius: 5px;
+    color: #ffffff;
     cursor: pointer;
+    display: block;
+    margin-left: auto;
 }
 
-button:hover {
-    background-color: #1abc9c;
+/* Navigation list */
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+
+    background-color: #0f172a;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
 }
 
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem auto;
-    max-width: 400px;
-    background-color: white;
+/* Open state */
+.navigation ul.open {
+    display: flex;
 }
 
-.completed {
-    background-color: #d1f7d6;
-    border-left: 5px solid #2ecc71;
+/* Links */
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.not-completed {
-    background-color: #f7d6d6;
-    border-left: 5px solid #e74c3c;
+/* Hover */
+.navigation a:hover {
+    color: #38bdf8;
+    /* light blue */
+    transform: scale(1.05);
+}
+
+/* Active page */
+.navigation a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 0.25rem;
 }
