@@ -1,32 +1,94 @@
 @media (min-width: 768px) {
 
+    /* ================= Navigation ================= */
     .navigation {
         padding: 1rem 3rem;
     }
 
-    /* Keep hamburger visible on desktop */
     .navigation button {
-        display: block;
         font-size: 2rem;
     }
 
-    /* Menu stays hidden until hamburger is clicked */
     .navigation ul {
-        position: absolute;
         top: 72px;
-        left: 0;
-        width: 100%;
-        background-color: #0f172a;
-
-        display: none;
         flex-direction: row;
         justify-content: center;
         gap: 3rem;
-        padding: 1rem 0;
     }
 
-    /* Open state still controlled by JS */
-    .navigation ul.open {
+    /* ================= Main Layout ================= */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "title title"
+            "about photo"
+            "courses courses";
+        gap: 1rem;
+    }
+
+    main h1 {
+        grid-area: title;
+        margin-bottom: 0.5rem;
+    }
+
+    .about {
+        grid-area: about;
         display: flex;
+        flex-direction: column;
+    }
+
+    .photo {
+        grid-area: photo;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .courses {
+        grid-area: courses;
+    }
+
+    /* ================= Equal Height Cards ================= */
+    .about .card-content,
+    .photo .card-content {
+        flex: 1;
+        display: flex;
+    }
+
+    .about p {
+        flex: 1;
+    }
+
+    .photo .card-content {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .photo img {
+        max-width: 75%;
+        height: auto;
+    }
+
+    /* ================= Courses ================= */
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ================= Social Icons ================= */
+    .icon-social {
+        margin: 0.75rem 0;
+    }
+
+    /* ================= Footer ================= */
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem 3rem;
     }
 }

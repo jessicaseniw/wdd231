@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | WDD 131</title>
+    <title>Home | WDD 231</title>
+    <meta description="Home page for WDD 231 course, showcasing student information and courses.">
+    <meta author="Jéssica Seniw">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +29,18 @@
     <!-- ================= HEADER ================= -->
     <header>
         <nav class="navigation">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Site logo">
+            </a>
+            <p>Chamber of Commerce</p>
+
+            <!-- Hamburger -->
             <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
                 ☰
             </button>
 
+            <!-- Navigation links -->
             <ul id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Chamber</a></li>
@@ -41,12 +51,78 @@
 
     <!-- ================= MAIN ================= -->
     <main>
+        <h1>Home</h1>
 
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <p>
+                    Massa facilisis per purus si imperdiet curae amet...
+                </p>
+            </div>
+        </section>
+
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <div class="card-content">
+                <img src="images/me-mirror.jpg" alt="Student photo">
+            </div>
+        </section>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-filters">
+                <button data-filter="ALL">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
+            </div>
+
+            <div class="course-list">
+                <div class="course" data-category="CSE">CSE 110</div>
+                <div class="course" data-category="CSE">CSE 111</div>
+                <div class="course" data-category="WDD">WDD 130</div>
+                <div class="course" data-category="WDD">WDD 131</div>
+            </div>
+
+            <p class="credits">
+                The total credits for courses listed above is 6
+            </p>
+        </section>
     </main>
+
+    <!-- Social media links -->
+    <div class="icon-social">
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <img src="images/github.svg" alt="GitHub icon">
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.svg" alt="LinkedIn icon">
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/insta.svg" alt="Instagram icon">
+        </a>
+
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.svg" alt="Facebook icon">
+        </a>
+    </div>
 
     <!-- ================= FOOTER ================= -->
     <footer>
+        <!-- Copyright info -->
+        <div class="footer-info">
+            <p>
+                © <span id="currentyear"></span> Jéssica Seniw | Brazil
+            </p>
+        </div>
 
+        <!-- Last modified -->
+        <div class="footer-modified">
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>
