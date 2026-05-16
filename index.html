@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | WDD 231</title>
+
     <meta name="description"
         content="Personal home page for the WDD 231 course presenting student information, web development studies, and certificate courses.">
     <meta name="author" content="Jéssica Seniw">
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,30 +19,26 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/small.css">
 
-    <!-- JAVASCRIPT -->
+    <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
-
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
     <header>
         <nav class="navigation">
-            <!-- Logo -->
             <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Site logo">
+                <img src="images/logo.svg" alt="Site logo" loading="lazy">
             </a>
+
             <p>Chamber of Commerce</p>
 
-            <!-- Hamburger -->
             <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
                 ☰
             </button>
 
-            <!-- Navigation links -->
             <ul id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Chamber</a></li>
@@ -50,27 +47,25 @@
         </nav>
     </header>
 
-    <!-- ================= MAIN ================= -->
     <main>
         <h1>Home</h1>
 
         <section class="about">
             <h2>About Me</h2>
             <div class="card-content">
-                <p>
-                    I am a motivated and dedicated student with a strong interest in technology and web development.
-                    I am currently focused on building a solid foundation in HTML, CSS, and JavaScript, always aiming
-                    to write clean, organized, and accessible code. I enjoy understanding how things work behind the
-                    scenes and turning ideas into functional and visually appealing web pages.
+                <p> I am a motivated and dedicated student with a strong interest in technology and web development. I
+                    am currently focused on building a solid foundation in HTML, CSS, and JavaScript, always aiming to
+                    write clean, organized, and accessible code. I enjoy understanding how things work behind the scenes
+                    and turning ideas into functional and visually appealing web pages.
                     <br><br>
-                    In addition to my technical studies, I value discipline, responsibility, and continuous learning.
-                    I believe consistency and effort are essential for personal and professional growth. I approach
-                    each challenge as an opportunity to improve my skills, solve problems, and gain new knowledge.
+                    In addition to my technical studies, I value discipline, responsibility, and continuous learning. I
+                    believe consistency and effort are essential for personal and professional growth. I approach each
+                    challenge as an opportunity to improve my skills, solve problems, and gain new knowledge.
                     <br><br>
                     Outside of academics, I appreciate organization, planning, and clear communication. These values
                     help me stay focused on my goals and work effectively both independently and in collaborative
-                    environments. My long-term goal is to continue developing my skills in software and web
-                    development while contributing positively to meaningful projects and communities.
+                    environments. My long-term goal is to continue developing my skills in software and web development
+                    while contributing positively to meaningful projects and communities.
                 </p>
             </div>
         </section>
@@ -91,48 +86,36 @@
                 <button data-filter="WDD">WDD</button>
             </div>
 
-            <div class="course-list">
-                <div class="course completed" data-category="CSE" data-credits="3">CSE 110</div>
-                <div class="course completed" data-category="CSE" data-credits="3">CSE 111</div>
-                <div class="course" data-category="WDD" data-credits="3">WDD 130</div>
-                <div class="course" data-category="WDD" data-credits="3">WDD 131</div>
-            </div>
+            <!-- JS will dynamically insert courses here -->
+            <div class="course-list"></div>
 
-            <p class="credits">
-                The total credits for courses listed above is 6
-            </p>
+            <p class="credits"></p>
         </section>
     </main>
 
-    <!-- Social media links -->
     <div class="icon-social">
-        <a href="https://github.com" target="_blank" aria-label="GitHub">
+        <a href="https://github.com" aria-label="GitHub">
             <img src="images/github.svg" alt="GitHub icon" loading="lazy">
         </a>
 
-        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com" aria-label="LinkedIn">
             <img src="images/linkedin.svg" alt="LinkedIn icon" loading="lazy">
         </a>
 
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com" aria-label="Instagram">
             <img src="images/insta.svg" alt="Instagram icon" loading="lazy">
         </a>
 
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com" aria-label="Facebook">
             <img src="images/facebook.svg" alt="Facebook icon" loading="lazy">
         </a>
     </div>
 
-    <!-- ================= FOOTER ================= -->
     <footer>
-        <!-- Copyright info -->
         <div class="footer-info">
-            <p>
-                © <span id="currentyear"></span> Jéssica Seniw | Brazil
-            </p>
+            <p>© <span id="currentyear"></span> Jéssica Seniw | Brazil</p>
         </div>
 
-        <!-- Last modified -->
         <div class="footer-modified">
             <p id="lastModified"></p>
         </div>
