@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Tecpon Indústria e Comércio de Produtos Químicos LTDA",
+            "address": "R. Nelson Teichmann, 275 - Cachoeirinha - RS",
+            "phone": "+55 (51) 3441-6500",
+            "website": "https://www.tecpon.com",
+            "image": "tecpon.png",
+            "membership": 3,
+            "description": "Technology solutions for small and medium businesses."
+        },
+        {
+            "name": "Alpha Química",
+            "address": "Av. das Indústrias, 2030 - Cachoeirinha - RS",
+            "phone": "+55 (51) 3025-4444",
+            "website": "https://www.alphaquimica.com.br",
+            "image": "alpha.png",
+            "membership": 2,
+            "description": "Cozy café serving specialty coffee and homemade pastries."
+        },
+        {
+            "name": "SERVICORTE Ind. e Com. de Metais Ltda",
+            "address": "Av. Tancredo Neves, 600 - Cachoeirinha - RS",
+            "phone": "+55 (51) 3074-3200",
+            "website": "https://www.servicorte.com",
+            "image": "servicorte.png",
+            "membership": 1,
+            "description": "Organic food and local produce market."
+        },
+        {
+            "name": "Cesuca Centro Universitário",
+            "address": "R. Silvério Manoel da Silva, 160 - Cachoeirinha - RS",
+            "phone": "0800 721 5844",
+            "website": "https://www.cesuca.edu.br",
+            "image": "cesuca.jpg",
+            "membership": 2,
+            "description": "Modern gym focused on health and well-being."
+        },
+        {
+            "name": "Stop Food Park",
+            "address": "Av. Gen. Flores da Cunha, 2944 - Cachoeirinha - RS",
+            "phone": "+55 (51) 94444-5555",
+            "website": "https://www.instagram.com",
+            "image": "food-park.jpg",
+            "membership": 3,
+            "description": "Educational services and tutoring programs."
+        },
+        {
+            "name": "La Fiuza Café",
+            "address": "Av. Lídio Batista Soares, 115 - Cachoeirinha - RS",
+            "phone": "+55 (51) 99503-4172",
+            "website": "https://www.instagram.com",
+            "image": "la-fiuza.jpg",
+            "membership": 1,
+            "description": "Graphic and digital design studio."
+        },
+        {
+            "name": "Colégio Adventista de Cachoeirinha",
+            "address": "R. Antônio Bastos, 291 - Cachoeirinha - RS",
+            "phone": "+55 (51) 3111-1111",
+            "website": "https://www.educacaoadventista.org.br",
+            "image": "adventista.jpg",
+            "membership": 3,
+            "description": "Residential and commercial security systems."
+        }
+    ]
+}

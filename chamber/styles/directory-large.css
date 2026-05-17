@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+
+    /* ================= Navigation ================= */
+    #menuButton {
+        display: none;
+    }
+
+    .navigation {
+        padding: 1rem 3rem;
+    }
+
+    .navigation ul {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        margin-left: auto;
+        gap: 3rem;
+        background: none;
+        width: auto;
+        padding: 0;
+    }
+
+    /* ================= Main ================= */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #members.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ================= Footer ================= */
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem 3rem;
+    }
+}

@@ -5,26 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chamber | WDD 231</title>
+    <title>Chamber Directory | WDD 231</title>
+
     <meta name="description"
-        content="Chamber of Commerce page for the WDD 231 course, focused on local business development, networking, and community growth.">
+        content="Business directory for the Cachoeirinha Chamber of Commerce, supporting local businesses and community growth.">
     <meta name="author" content="Jéssica Seniw">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.icon">
 
-    <!-- JS (Same as Home Page) -->
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Cachoeirinha Chamber of Commerce">
+    <meta property="og:description"
+        content="Supporting local businesses, encouraging growth, and strengthening community connections.">
+    <meta property="og:image" content="images/chamber-social.jpg">
+    <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+
+    <!-- JavaScript -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
-    <!-- ================= HEADER ================= -->
+
     <header>
         <nav class="navigation">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Site logo" loading="lazy">
+            <a href="directory.html" class="logo">
+                <img src="../images/logo.svg" alt="Cachoeirinha Chamber logo" loading="lazy">
             </a>
 
             <p>Cachoeirinha Chamber of Commerce</p>
@@ -34,68 +48,56 @@
             </button>
 
             <ul id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Chamber</a></li>
                 <li><a href="#">Final</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ================= NAV (Same as Home Page) ================= -->
-    <nav class="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="chamber.html" class="active">Chamber</a></li>
-            <li><a href="../final.html">Final</a></li>
-        </ul>
-    </nav>
-
-    <!-- ================= MAIN ================= -->
     <main>
-        <h1>Chamber</h1>
+        <h1>Business Directory</h1>
 
-        <section>
-            <h2>About the Chamber</h2>
-            <p>
-                The Chamber of Commerce supports local businesses, promotes economic
-                development, and strengthens community relationships.
-            </p>
-        </section>
+        <div class="view-buttons">
+            <button id="grid" class="active" aria-label="Grid view"></button>
+            <button id="list" aria-label="List view"></button>
+        </div>
 
-        <section>
-            <h2>Business Directory</h2>
-            <p>
-                Explore a growing list of businesses that contribute to the local
-                economy and provide valuable services to the community.
-            </p>
-        </section>
-
-        <section>
-            <h2>Events & Networking</h2>
-            <p>
-                Learn about upcoming events, meetings, and networking opportunities
-                designed to connect professionals and entrepreneurs.
-            </p>
+        <section id="members" class="grid-view">
+            <!-- Member cards injected via JavaScript -->
         </section>
     </main>
 
-    <!-- ================= FOOTER (Same as Home Page) ================= -->
     <footer>
-        <div class="social">
-            <a href="https://github.com/SEU_GITHUB" target="_blank">
-                <img src="images/github.svg" alt="GitHub">
+        <div class="icon-social">
+            <a href="https://github.com" aria-label="GitHub">
+                <img src="../images/github.svg" alt="GitHub icon">
             </a>
-            <a href="https://www.linkedin.com/in/SEU_LINKEDIN/" target="_blank">
-                <img src="images/linkedin.svg" alt="LinkedIn">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">
+                <img src="../images/linkedin.svg" alt="LinkedIn icon">
+            </a>
+            <a href="https://www.instagram.com" aria-label="Instagram">
+                <img src="../images/insta.svg" alt="Instagram icon">
+            </a>
+            <a href="https://www.facebook.com" aria-label="Facebook">
+                <img src="../images/facebook.svg" alt="Facebook icon">
             </a>
         </div>
 
-        <p>
-            &copy; <span id="currentyear"></span> Jessica Seniw | Brazil
-        </p>
-
-        <p id="lastModified"></p>
+        <div class="footer-info">
+            <p>Jéssica Seniw | WDD 231</p>
+            <p>
+                Cachoeirinha Chamber of Commerce<br>
+                Email: info@cachoeirinhachamber.org<br>
+                Phone: +55 (51) 99999-9999
+            </p>
+            <p>
+                &copy; <span id="currentyear"></span> |
+                Last Modified: <span id="lastModified"></span>
+            </p>
+        </div>
     </footer>
+
 </body>
 
 </html>
