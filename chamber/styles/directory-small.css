@@ -93,14 +93,6 @@ h1 {
 }
 
 /* Icons */
-#grid {
-    background-image: url("../images/grid.svg");
-}
-
-#list {
-    background-image: url("../images/list.svg");
-}
-
 .view-buttons button.active {
     background-color: #e5e7eb;
     outline: 2px solid #0f172a;
