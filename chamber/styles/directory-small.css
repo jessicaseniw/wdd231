@@ -71,25 +71,28 @@ h1 {
     text-align: center;
 }
 
-/* View buttons */
+/*View buttons*/
 .view-buttons {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem 0;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .view-buttons button {
     width: 44px;
     height: 44px;
-    border: none;
     background-color: transparent;
+    border: 1px solid #cbd5f5;
+    border-radius: 6px;
+    cursor: pointer;
+
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 24px;
-    cursor: pointer;
+    background-size: 22px;
 }
 
+/* Icons */
 #grid {
     background-image: url("../images/grid.svg");
 }
@@ -99,8 +102,8 @@ h1 {
 }
 
 .view-buttons button.active {
+    background-color: #e5e7eb;
     outline: 2px solid #0f172a;
-    border-radius: 4px;
 }
 
 /* ================= Directory ================= */
