@@ -27,8 +27,14 @@
         padding: 2rem;
     }
 
+    /* ================= Directory ================= */
     #members.grid-view {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* List view spacing improvement */
+    #members.list-view .member-card {
+        text-align: left;
     }
 
     /* ================= Footer ================= */
