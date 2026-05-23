@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
 
     /* ================= Navigation ================= */
+
     #menuButton {
         display: none;
     }
@@ -21,30 +22,79 @@
     }
 
     /* ================= Main ================= */
+
     main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
+        padding: 2rem 3rem;
     }
 
-    .home-grid {
+    /* =====================================================
+       HOME PAGE
+    ===================================================== */
+
+    /* WEATHER */
+
+    .weather-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .weather-item {
+        flex: 1;
+    }
+
+    .weather-item:not(:last-child) {
+        border-right: 1px solid #cbd5e1;
+        padding-right: 2rem;
+    }
+
+    .weather-main {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    /* BOTTOM GRID */
+
+    .bottom-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        align-items: start;
     }
 
+    /* COMMUNITY */
 
-    /* ================= Directory ================= */
+    .community-card {
+        height: 100%;
+    }
+
+    /* SPOTLIGHT */
+
+    .spotlight-card {
+        height: 100%;
+    }
+
+    #spotlights .business {
+        align-items: flex-start;
+    }
+
+    #spotlights .business img {
+        width: 220px;
+        height: 140px;
+    }
+
+    /* ================= DIRECTORY PAGE ================= */
+
     #members.grid-view {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* List view spacing improvement */
     #members.list-view .member-card {
         text-align: left;
     }
 
     /* ================= Footer ================= */
+
     footer {
         flex-direction: row;
         justify-content: space-between;

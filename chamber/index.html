@@ -33,7 +33,6 @@
     <!-- Base site layout -->
     <link rel="stylesheet" href="../styles/small.css">
     <link rel="stylesheet" href="../styles/large.css">
-    <link rel="stylesheet" href="../styles/normalize.css">
 
     <!-- Chamber specific -->
     <link rel="stylesheet" href="styles/directory-small.css">
@@ -42,6 +41,11 @@
     <!-- JavaScript -->
     <script src="../scripts/navigation.js" defer></script>
     <script src="../scripts/date.js" defer></script>
+
+    <!-- HOME PAGE JS -->
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
 </head>
 
 <body>
@@ -66,77 +70,88 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Grid isolado do main -->
-        <div class="home-grid">
+    <main class="home-grid">
 
-            <!-- Weather -->
-            <section class="card weather">
-                <header class="card-header">
-                    <img src="images/weather.ico" alt="Weather icon" class="icon">
-                    <h2>Weather</h2>
-                </header>
+        <!-- WEATHER -->
+        <section class="weather-card">
 
-                <p class="temperature">17° C</p>
+            <div class="weather-item weather-main">
 
-                <ul class="weather-info">
-                    <li>
-                        <img src="images/wind.svg" alt="Wind icon">
-                        Wind: 11 km/h
-                    </li>
-                    <li>
-                        <img src="images/humidity.svg" alt="Humidity icon">
-                        Humidity: 86%
-                    </li>
-                    <li>
-                        <img src="images/pressure.svg" alt="Pressure icon">
-                        Pressure: 1025 hPa
-                    </li>
-                </ul>
-            </section>
+                <img id="weatherIcon" src="images/weather.ico" alt="Weather icon">
 
-            <!-- Community -->
-            <section class="card community">
-                <header class="card-header">
-                    <img src="images/community.svg" alt="Community icon" class="icon">
+                <div>
+                    <h2>Cachoeirinha</h2>
+                    <p id="weatherDescription"></p>
+                </div>
+
+            </div>
+
+            <div class="weather-item">
+                <p class="temperature">
+                    <span id="currentTemp"></span>° C
+                </p>
+            </div>
+
+            <div class="weather-item">
+                <div>
+                    <h3>Today</h3>
+                    <p id="forecast1"></p>
+                </div>
+            </div>
+
+            <div class="weather-item">
+                <div>
+                    <h3>Tomorrow</h3>
+                    <p id="forecast2"></p>
+                </div>
+            </div>
+
+            <div class="weather-item">
+                <div>
+                    <h3>Day 3</h3>
+                    <p id="forecast3"></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BOTTOM SECTION -->
+        <section class="bottom-grid">
+
+            <!-- COMMUNITY -->
+            <div class="community-card">
+
+                <div class="community-header">
+                    <img src="images/community.svg" alt="Community icon">
                     <h2>Community</h2>
-                </header>
+                </div>
+
+                <img src="images/community.jpg" alt="Community image">
 
                 <p>
-                    Supporting local businesses and strengthening connections
-                    in Cachoeirinha.
+                    Supporting local businesses and strengthening
+                    connections in Cachoeirinha.
                 </p>
 
-                <a href="directory.html" class="cta-button">
-                    Explore Directory →
-                </a>
-            </section>
+                <a href="directory.html">Explore Directory →</a>
 
-            <!-- Spotlight -->
-            <section class="card spotlight">
-                <header class="card-header">
-                    <img src="images/spotlight.svg" alt="Spotlight icon" class="icon">
+            </div>
+
+            <!-- SPOTLIGHT -->
+            <div class="spotlight-card">
+
+                <div class="spotlight-header">
+                    <img src="images/spotlight.svg" alt="Spotlight icon">
                     <h2>Business Spotlight</h2>
-                </header>
+                </div>
 
-                <article class="spotlight-item">
-                    <img src="images/business1.png" alt="Local Coffee logo">
-                    <div>
-                        <h3>Local Coffee</h3>
-                        <p>Fresh coffee and pastries every morning.</p>
-                    </div>
-                </article>
+                <!-- Dynamic spotlight cards -->
+                <div id="spotlights"></div>
 
-                <article class="spotlight-item">
-                    <img src="images/business2.png" alt="Tech Solutions logo">
-                    <div>
-                        <h3>Tech Solutions</h3>
-                        <p>Innovative services for small businesses.</p>
-                    </div>
-                </article>
-            </section>
+            </div>
 
-        </div>
+        </section>
+
     </main>
 
     <footer>
@@ -144,12 +159,15 @@
             <a href="https://github.com" aria-label="GitHub">
                 <img src="../images/github.svg" alt="GitHub icon">
             </a>
+
             <a href="https://www.linkedin.com" aria-label="LinkedIn">
                 <img src="../images/linkedin.svg" alt="LinkedIn icon">
             </a>
+
             <a href="https://www.instagram.com" aria-label="Instagram">
                 <img src="../images/insta.svg" alt="Instagram icon">
             </a>
+
             <a href="https://www.facebook.com" aria-label="Facebook">
                 <img src="../images/facebook.svg" alt="Facebook icon">
             </a>
@@ -157,11 +175,13 @@
 
         <div class="footer-info">
             <p>Jéssica Seniw | WDD 231</p>
+
             <p>
                 Cachoeirinha Chamber of Commerce<br>
                 Email: info@cachoeirinhachamber.org<br>
                 Phone: +55 (51) 99999-9999
             </p>
+
             <p>
                 &copy; <span id="currentyear"></span> |
                 <span id="lastModified"></span>
