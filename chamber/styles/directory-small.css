@@ -1,8 +1,3 @@
-/* ================= Main (shared) ================= */
-main {
-    padding: 1rem;
-}
-
 /* ================= View Buttons (Directory only) ================= */
 .view-buttons {
     display: flex;
@@ -81,28 +76,7 @@ main {
     font-weight: 600;
 }
 
-/* ================= Footer ================= */
-footer {
-    background-color: #0f172a;
-    color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.icon-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.icon-social img {
-    width: 30px;
-    filter: brightness(0) invert(1);
-}
+/*=================Footer=================*/
 
 .footer-info {
     font-size: 0.9rem;
