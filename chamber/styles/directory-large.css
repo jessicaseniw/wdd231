@@ -27,6 +27,13 @@
         padding: 2rem;
     }
 
+    .home-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+
     /* ================= Directory ================= */
     #members.grid-view {
         grid-template-columns: repeat(3, 1fr);

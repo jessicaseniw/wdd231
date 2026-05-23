@@ -178,3 +178,95 @@ footer {
 .footer-info {
     font-size: 0.9rem;
 }
+
+/*----------------- HOME PAGE -----------------*/
+
+/* MAIN GRID */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* CARD BASE */
+.card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* CARD HEADER */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-header .icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* WEATHER */
+.temperature {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.weather-info {
+    list-style: none;
+    padding: 0;
+}
+
+.weather-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.weather-info img {
+    width: 18px;
+    height: 18px;
+}
+
+/* CTA */
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background-color: #0a4c8b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #083b6c;
+}
+
+/* SPOTLIGHT */
+.spotlight-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.spotlight-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}

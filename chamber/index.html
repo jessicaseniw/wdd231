@@ -14,7 +14,7 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Cachoeirinha Chamber of Commerce">
     <meta property="og:description"
         content="Supporting local businesses, encouraging growth, and strengthening community connections.">
@@ -29,13 +29,19 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/normalize.css">
+
+    <!-- Base site layout -->
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/large.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+
+    <!-- Chamber specific -->
     <link rel="stylesheet" href="styles/directory-small.css">
     <link rel="stylesheet" href="styles/directory-large.css">
 
     <!-- JavaScript -->
     <script src="../scripts/navigation.js" defer></script>
     <script src="../scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
@@ -59,9 +65,80 @@
             </ul>
         </nav>
     </header>
-    <main>
 
+    <main>
+        <!-- Grid isolado do main -->
+        <div class="home-grid">
+
+            <!-- Weather -->
+            <section class="card weather">
+                <header class="card-header">
+                    <img src="images/weather.ico" alt="Weather icon" class="icon">
+                    <h2>Weather</h2>
+                </header>
+
+                <p class="temperature">17° C</p>
+
+                <ul class="weather-info">
+                    <li>
+                        <img src="images/wind.svg" alt="Wind icon">
+                        Wind: 11 km/h
+                    </li>
+                    <li>
+                        <img src="images/humidity.svg" alt="Humidity icon">
+                        Humidity: 86%
+                    </li>
+                    <li>
+                        <img src="images/pressure.svg" alt="Pressure icon">
+                        Pressure: 1025 hPa
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Community -->
+            <section class="card community">
+                <header class="card-header">
+                    <img src="images/community.svg" alt="Community icon" class="icon">
+                    <h2>Community</h2>
+                </header>
+
+                <p>
+                    Supporting local businesses and strengthening connections
+                    in Cachoeirinha.
+                </p>
+
+                <a href="directory.html" class="cta-button">
+                    Explore Directory →
+                </a>
+            </section>
+
+            <!-- Spotlight -->
+            <section class="card spotlight">
+                <header class="card-header">
+                    <img src="images/spotlight.svg" alt="Spotlight icon" class="icon">
+                    <h2>Business Spotlight</h2>
+                </header>
+
+                <article class="spotlight-item">
+                    <img src="images/business1.png" alt="Local Coffee logo">
+                    <div>
+                        <h3>Local Coffee</h3>
+                        <p>Fresh coffee and pastries every morning.</p>
+                    </div>
+                </article>
+
+                <article class="spotlight-item">
+                    <img src="images/business2.png" alt="Tech Solutions logo">
+                    <div>
+                        <h3>Tech Solutions</h3>
+                        <p>Innovative services for small businesses.</p>
+                    </div>
+                </article>
+            </section>
+
+        </div>
     </main>
+
     <footer>
         <div class="icon-social">
             <a href="https://github.com" aria-label="GitHub">
