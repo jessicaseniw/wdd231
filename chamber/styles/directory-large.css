@@ -31,6 +31,16 @@
        HOME PAGE
     ===================================================== */
 
+    /* HERO */
+
+    .hero img {
+        height: 500px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
     /* WEATHER */
 
     .weather-card {

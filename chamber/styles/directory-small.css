@@ -1,3 +1,49 @@
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: #0f3ea8;
+    color: white;
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+    border-radius: 8px;
+
+    font-weight: 700;
+}
+
 /* ================= View Buttons (Directory only) ================= */
 .view-buttons {
     display: flex;
