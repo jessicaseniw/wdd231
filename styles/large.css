@@ -24,7 +24,7 @@
         margin: 0 auto;
         padding: 1rem;
 
-        display: grid;
+        display: block;
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
             "title title"
