@@ -380,14 +380,6 @@ input[type="submit"]:hover {
     gap: 1rem;
 }
 
-.membership-card {
-    background: #e5e7eb;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-}
-
 .membership-card h2 {
     margin-top: 0;
 }
