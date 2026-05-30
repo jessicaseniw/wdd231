@@ -461,3 +461,39 @@ dialog button {
 .membership-card:nth-child(4) {
     animation-delay: 0.8s;
 }
+
+/* ================= THANK YOU PAGE ================= */
+
+.thankyou-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thankyou-message {
+    margin-bottom: 2rem;
+}
+
+.application-summary {
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+
+.application-summary h2 {
+    background: none;
+    color: #0f172a;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.application-summary p {
+    padding: .75rem 0;
+    margin: 0;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.application-summary p:last-child {
+    border-bottom: none;
+}
