@@ -103,6 +103,15 @@
         text-align: left;
     }
 
+    /* ================= JOIN PAGE ================= */
+
+    .join-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
     /* ================= Footer ================= */
 
     footer {
@@ -113,3 +122,4 @@
         padding: 1rem 3rem;
     }
 }
+

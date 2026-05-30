@@ -74,16 +74,72 @@
 
         <h1>Join the Chamber</h1>
 
+        <div class="join-container">
+
+            <!-- FORM -->
+            <section class="join-form">
+                <!-- seu formulário aqui -->
+            </section>
+
+            <!-- MEMBERSHIP CARDS -->
+            <section class="membership-cards">
+
+                <!-- NP -->
+                <div class="membership-card">
+                    <h2>NP Membership</h2>
+                    <p>For non-profit organizations.</p>
+
+                    <a href="#npModal">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Bronze -->
+                <div class="membership-card">
+                    <h2>Bronze Membership</h2>
+                    <p>Entry-level chamber membership.</p>
+
+                    <a href="#bronzeModal">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Silver -->
+                <div class="membership-card">
+                    <h2>Silver Membership</h2>
+                    <p>Expanded business benefits.</p>
+
+                    <a href="#silverModal">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Gold -->
+                <div class="membership-card">
+                    <h2>Gold Membership</h2>
+                    <p>Premium exposure and benefits.</p>
+
+                    <a href="#goldModal">
+                        Learn More
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
+
         <form method="get" action="thankyou.html">
 
             <!-- First Name -->
 
             <div class="form-group">
 
-                <label for="firstName">First Name *</label>
+                <label>
+                    First Name *
 
-                <input type="text" id="firstName" name="firstName" title="Enter your first name"
-                    autocomplete="given-name" required>
+                    <input type="text" id="firstName" name="firstName" title="Enter your first name"
+                        autocomplete="given-name" required>
+                </label>
 
             </div>
 
@@ -203,6 +259,73 @@
             <input type="submit" value="Apply for Membership">
 
         </form>
+
+        <dialog id="npModal">
+
+            <h2>NP Membership</h2>
+
+            <ul>
+                <li>No membership fee</li>
+                <li>Networking opportunities</li>
+                <li>Community event access</li>
+            </ul>
+
+            <button onclick="document.getElementById('npModal').close()">
+                Close
+            </button>
+
+        </dialog>
+
+        <dialog id="bronzeModal">
+
+            <h2>Bronze Membership</h2>
+
+            <ul>
+                <li>Business directory listing</li>
+                <li>Networking events</li>
+                <li>Member newsletter</li>
+            </ul>
+
+            <button onclick="document.getElementById('bronzeModal').close()">
+                Close
+            </button>
+
+        </dialog>
+
+        <dialog id="silverModal">
+        
+            <h2>Silver Membership</h2>
+        
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Event discounts</li>
+                <li>Training workshops</li>
+                <li>Advertising opportunities</li>
+            </ul>
+        
+            <button onclick="document.getElementById('silverModal').close()">
+                Close
+            </button>
+        
+        </dialog>
+
+        <dialog id="goldModal">
+        
+            <h2>Gold Membership</h2>
+        
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Homepage spotlight opportunities</li>
+                <li>Premium advertising</li>
+                <li>VIP business events</li>
+                <li>Featured directory placement</li>
+            </ul>
+        
+            <button onclick="document.getElementById('goldModal').close()">
+                Close
+            </button>
+        
+        </dialog>
 
     </main>
 
