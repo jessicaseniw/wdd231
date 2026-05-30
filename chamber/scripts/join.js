@@ -1,20 +1,21 @@
 const timestampField = document.querySelector("#timestamp");
 
-timestampField.value = new Date().toISOString();
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
 
-const links = document.querySelectorAll(".membership-card a");
+const modalButtons = document.querySelectorAll("[data-modal]");
 
-links.forEach(link => {
+modalButtons.forEach(button => {
 
-    link.addEventListener("click", (event) => {
+    button.addEventListener("click", () => {
 
-        event.preventDefault();
+        const modalId = button.dataset.modal;
+        const modal = document.getElementById(modalId);
 
-        const modalId =
-            link.getAttribute("href").replace("#", "");
-
-        document
-            .getElementById(modalId)
-            .showModal();
+        if (modal) {
+            modal.showModal();
+        }
     });
+
 });

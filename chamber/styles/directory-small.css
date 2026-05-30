@@ -305,10 +305,84 @@
    JOIN PAGE
 ===================================================== */
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.membership-card a:focus {
+    outline: 3px solid #0f3ea8;
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   JOIN PAGE
+===================================================== */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid #0f3ea8;
+    outline-offset: 2px;
+}
+
 .join-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.form-note {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.join-form {
+    width: 100%;
+    display: block;
+}
+
+.join-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: .85rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #0f3ea8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+input[type="submit"]:hover {
+    opacity: .9;
 }
 
 .membership-cards {
@@ -322,4 +396,38 @@
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+
+.membership-card h2 {
+    margin-top: 0;
+}
+
+.membership-card button {
+    background-color: #0f3ea8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ================= MODALS ================= */
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 450px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    cursor: pointer;
 }
