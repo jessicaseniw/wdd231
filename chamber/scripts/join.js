@@ -19,3 +19,11 @@ modalButtons.forEach(button => {
     });
 
 });
+
+const closeButtons = document.querySelectorAll(".close-modal");
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        button.closest("dialog").close();
+    });
+});
