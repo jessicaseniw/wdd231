@@ -1,0 +1,103 @@
+/* ==================================================
+   WANDERLY - PROJECT SITE PLAN
+================================================== */
+
+/* ================= COLORS ================= */
+
+:root {
+    --primary-color: #1f4e70;
+    --secondary-color: #f0f4f8;
+    --accent-color: #f29c54;
+    --text-color: #333333;
+    --complementary-color: #4a90a8;
+}
+
+/* ================= GLOBAL STYLES ================= */
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+/* ================= COLOR SCHEME ================= */
+
+.color-box {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+
+    margin-right: 1rem;
+    vertical-align: middle;
+
+    border: 1px solid #000;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent {
+    background-color: var(--accent-color);
+}
+
+.text {
+    background-color: var(--text-color);
+}
+
+.complementary {
+    background-color: var(--complementary-color);
+}
+
+/* ================= WIREFRAMES ================= */
+
+.wireframe {
+    background-color: #ffffff;
+    border: 2px dashed var(--accent-color);
+
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.wireframe p {
+    margin: 0.5rem 0;
+}
