@@ -489,3 +489,22 @@ dialog button {
 .application-summary p:last-child {
     border-bottom: none;
 }
+
+/* ===== DISCOVER PAGE ===== */
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas:
+        "sidebar"
+        "gallery";
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.gallery {
+    grid-area: gallery;
+}
