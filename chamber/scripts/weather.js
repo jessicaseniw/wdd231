@@ -1,3 +1,5 @@
+/* ==== WEATHER JS ==== */
+
 const apiKey = "5d7a574be290b819810371ce389ec5b7";
 
 const lat = -29.9538;

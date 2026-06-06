@@ -1,3 +1,5 @@
+/* ==== JOIN JS ==== */
+
 const timestampField = document.querySelector("#timestamp");
 
 if (timestampField) {

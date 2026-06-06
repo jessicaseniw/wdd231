@@ -1,3 +1,5 @@
+/* ==== SPOTLIGHT JS ==== */
+
 const spotlightContainer = document.querySelector("#spotlights");
 
 async function getSpotlights() {

@@ -1,3 +1,5 @@
+/* ==== DIRECTORY JS ==== */
+
 const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");

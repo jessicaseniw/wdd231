@@ -1,3 +1,5 @@
+/* ==== THANK YOU JS ==== */
+
 const params = new URLSearchParams(window.location.search);
 
 document.querySelector("#firstName").textContent =
