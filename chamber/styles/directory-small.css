@@ -627,6 +627,8 @@ dialog button {
   padding: 1rem;
 }
 
+/* ================= MOBILE CARDS (SEM ANIMAÇÃO) ================= */
+
 .discover-card {
   background: #e5e7eb;
   border-radius: 12px;
@@ -634,7 +636,7 @@ dialog button {
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-/* FRONT image */
+/* IMAGE */
 .discover-card img {
   width: 100%;
   height: 200px;
@@ -650,33 +652,38 @@ dialog button {
   color: #0f172a;
 }
 
-/* DESCRIPTION (se estiver no front via JS ou futuro ajuste) */
+/* DESCRIPTION */
 .discover-card p {
   margin: 0;
   padding: 0 1rem 0.75rem;
   font-size: 0.95rem;
-  color: #334155;
+  color: white;
 }
 
 /* ADDRESS */
 .discover-card address {
   font-style: normal;
   font-size: 0.85rem;
-  color: #64748b;
+  color:white;
   padding: 0 1rem 1rem;
 }
 
-.card-inner {
-  display: block;
-  transform: none !important;
-}
+/* ================= DISABLE FLIP COMPLETELY ON MOBILE ================= */
 
-.card-back {
-  display: none !important;
-}
+@media (max-width: 640px) {
 
-.discover-card:hover .card-inner {
-  transform: none !important;
+  /* desativa flip sem quebrar layout */
+  .card-inner {
+    transform: none !important;
+  }
+
+  .card-back {
+    display: none !important;
+  }
+
+  .discover-card:hover .card-inner {
+    transform: none !important;
+  }
 }
 
 /* ================= VISIT MESSAGE (TOAST) ================= */
