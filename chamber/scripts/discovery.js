@@ -12,37 +12,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (gallery) {
     discoverItems.forEach(item => {
+        const card = document.createElement("section");
+        card.classList.add("discover-card");
 
-      const card = document.createElement("section");
-      card.classList.add("discover-card");
+        const cardInner = document.createElement("div");
+        cardInner.classList.add("card-inner");
 
-      const title = document.createElement("h2");
-      title.textContent = item.name;
+        // FRONT
+        const cardFront = document.createElement("div");
+        cardFront.classList.add("card-front");
 
-      const figure = document.createElement("figure");
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.alt = item.name;
+        img.loading = "lazy";
+        figure.appendChild(img);
 
-      const img = document.createElement("img");
-      img.src = item.image;
-      img.alt = item.name;
-      img.loading = "lazy";
-      img.width = 300;
-      img.height = 200;
+        const title = document.createElement("h2");
+        title.textContent = item.name;
 
-      figure.appendChild(img);
+        cardFront.appendChild(figure);
+        cardFront.appendChild(title);
 
-      const address = document.createElement("address");
-      address.textContent = item.address;
+        // BACK
+        const cardBack = document.createElement("div");
+        cardBack.classList.add("card-back");
 
-      const description = document.createElement("p");
-      description.textContent = item.description;
+        const description = document.createElement("p");
+        description.textContent = item.description;
 
-      const button = document.createElement("button");
-      button.textContent = "Learn More";
-      button.type = "button";
+        const address = document.createElement("address");
+        address.textContent = item.address;
 
-      card.append(title, figure, address, description, button);
-      gallery.appendChild(card);
-    });
+        const button = document.createElement("button");
+        button.textContent = "Learn More";
+
+        cardBack.append(description, address, button);
+
+        // APPEND TO INNER
+        cardInner.append(cardFront, cardBack);
+        card.appendChild(cardInner);
+
+        gallery.appendChild(card);
+        });
   }
 
   /* =========================
