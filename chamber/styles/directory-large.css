@@ -232,7 +232,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(to bottom, rgba(149, 143, 235, 0) 60%, rgba(0,0,0,0.6) 100%);
   }
 
   .card-front h2 {
@@ -244,7 +244,8 @@
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    background: none;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     z-index: 2;
   }
 
@@ -259,6 +260,12 @@
     gap: 0.75rem;
   }
 
+  .card-back h3 {
+    font-size: 1.2rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+  }
+
   .card-back address {
     font-style: normal;
     font-size: 0.9rem;
@@ -271,8 +278,8 @@
   }
 
   .card-back button {
-    margin: 1rem auto 0 auto; /* margem superior + centralização horizontal */
-    display: block; /* permite centralizar com auto margin */
+    margin: 1rem auto 0 auto;
+    display: block;
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     border: none;
     color: #fff;

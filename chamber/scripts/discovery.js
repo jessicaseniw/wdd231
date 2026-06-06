@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         figure.appendChild(img);
 
         const title = document.createElement("h2");
-        title.textContent = item.name;
+        title.textContent = item.nickname;
 
         cardFront.appendChild(figure);
         cardFront.appendChild(title);
@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // BACK
         const cardBack = document.createElement("div");
         cardBack.classList.add("card-back");
+
+        const fullName = document.createElement("h3");
+        fullName.textContent = item.name;
 
         const description = document.createElement("p");
         description.textContent = item.description;
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const button = document.createElement("button");
         button.textContent = "Learn More";
 
-        cardBack.append(description, address, button);
+        cardBack.append(fullName, description, address, button);
 
         // APPEND TO INNER
         cardInner.append(cardFront, cardBack);
