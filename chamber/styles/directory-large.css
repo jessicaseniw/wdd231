@@ -138,12 +138,17 @@
 }
 
 /* ===== DISCOVER PAGE ===== */
+@media (min-width: 900px) {
 
-@media (min-width: 768px) {
+  .discover-grid {
+    grid-template-areas:
+      "sidebar"
+      "gallery";
+    grid-template-columns: 1fr;
+  }
 
-    .discover-grid {
-        grid-template-areas: "sidebar gallery";
-        grid-template-columns: 300px 1fr;
-    }
-
+  .gallery {
+    grid-template-columns: repeat(4, 300px);
+    justify-content: center;
+  }
 }

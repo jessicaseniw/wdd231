@@ -1,180 +1,134 @@
-<!-- CHAMBER INDEX -->
+<!-- CHAMBER DISCOVERY -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chamber Discovery | WDD 231</title>
+  <title>Chamber Discovery | WDD 231</title>
 
-    <meta name="description"
-        content="Community highlights, local business spotlights, weather updates, and calls to action for the Cachoeirinha Chamber of Commerce.">
-    <meta name="author" content="Jéssica Seniw">
+  <meta name="description"
+    content="Discover the highlights, demographics, and key locations of Cachoeirinha, Brazil.">
+  <meta name="author" content="Jéssica Seniw">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Cachoeirinha Chamber of Commerce">
-    <meta property="og:description"
-        content="Supporting local businesses, encouraging growth, and strengthening community connections.">
-    <meta property="og:image" content="https://jessicaseniw.github.io/wdd231/chamber/images/chamber-social.png">
-    <meta property="og:url" content="https://jessicaseniw.github.io/wdd231/chamber/discover.html">
-    <meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cachoeirinha Chamber of Commerce">
+  <meta property="og:description"
+    content="Discover what makes Cachoeirinha a great place to live, work, and invest.">
+  <meta property="og:image"
+    content="https://jessicaseniw.github.io/wdd231/chamber/images/chamber-social.png">
+  <meta property="og:url"
+    content="https://jessicaseniw.github.io/wdd231/chamber/discovery.html">
+  <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../styles/normalize.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/small.css">
+  <link rel="stylesheet" href="../styles/large.css">
 
-    <!-- Base site layout -->
-    <link rel="stylesheet" href="../styles/small.css">
-    <link rel="stylesheet" href="../styles/large.css">
+  <!-- Chamber / Discover CSS -->
+  <link rel="stylesheet" href="styles/directory-small.css">
+  <link rel="stylesheet" href="styles/directory-medium.css">
+  <link rel="stylesheet" href="styles/directory-large.css">
 
-    <!-- Chamber specific -->
-    <link rel="stylesheet" href="styles/directory-small.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+  <!-- JavaScript -->
+  <script src="../scripts/navigation.js" defer></script>
+  <script src="../scripts/date.js" defer></script>
 
-    <!-- Discovery Tablet-->
-    <link rel="stylesheet" href="styles/directory-medium.css">
-
-    <!-- JavaScript -->
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="../scripts/date.js" defer></script>
-
-    <!-- HOME PAGE JS -->
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
-
+  <!-- Discover Page Script -->
+  <script src="scripts/discovery.js" type="module"></script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navigation">
-            <a href="index.html" class="logo">
-                <img src="../images/logo.svg" alt="Cachoeirinha Chamber logo" loading="lazy">
-            </a>
+  <header>
+    <nav class="navigation">
+      <a href="index.html" class="logo">
+        <img src="../images/logo.svg" alt="Cachoeirinha Chamber logo" loading="lazy">
+      </a>
 
-            <p>Cachoeirinha Chamber of Commerce</p>
+      <p>Cachoeirinha Chamber of Commerce</p>
 
-            <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
-                ☰
-            </button>
+      <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
 
-            <ul id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Chamber</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discovery.html" class="active">Discover</a></li>
-                <li><a href="#">Final</a></li>
-            </ul>
-        </nav>
-    </header>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Chamber</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discovery.html" class="active">Discover</a></li>
+        <li><a href="#">Final</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="discover-grid">
+  <main class="discover-grid">
 
     <aside class="sidebar">
-        <h2>About Cachoeirinha</h2>
-        <p>
-            Cachoeirinha is a city in Rio Grande do Sul, Brazil, known for its
-            strong industrial sector and community-focused development.
-        </p>
+      <h2>About Cachoeirinha</h2>
+      <p>
+        Cachoeirinha is a city in Rio Grande do Sul, Brazil, known for its strong
+        industrial base and community-oriented development.
+      </p>
 
-        <h3>Demographics</h3>
-        <ul>
-            <li>Population: ~130,000</li>
-            <li>Urban Area: 44 km²</li>
-            <li>Economy: Industry, commerce, services</li>
-        </ul>
+      <h3>Demographics</h3>
+      <ul>
+        <li>Population: ~130,000</li>
+        <li>Urban Area: 44 km²</li>
+        <li>Economy: Industry, commerce, services</li>
+      </ul>
     </aside>
 
     <section class="gallery">
-
-        <figure>
-            <img src="images/community.avif" alt="Parque da Matriz">
-            <figcaption>Parque da Matriz – Area for leisure and family activities</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/community.avif" alt="Praça da Bíblia">
-            <figcaption>Praça da Bíblia – Community and cultural events</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/hero.avif" alt="Industrial District">
-            <figcaption>Industrial District – Economic and business growth</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/community.avif" alt="Local Commerce">
-            <figcaption>Local Commerce – Strong small business presence</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/community.avif" alt="Community Events">
-            <figcaption>Community Events – Engagement and networking</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/hero.avif" alt="Education">
-            <figcaption>Education – Schools and professional training</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/community.avif" alt="Urban Mobility">
-            <figcaption>Urban Mobility – Public transportation access</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/community.avif" alt="Quality of Life">
-            <figcaption>Quality of Life – Safe and welcoming city</figcaption>
-        </figure>
-
+      <!-- Dynamic content loaded by discovery.js -->
     </section>
 
-</main>
+  </main>
 
-<footer>
+  <footer>
     <div class="icon-social">
-        <a href="https://github.com" aria-label="GitHub">
-            <img src="../images/github.svg" alt="GitHub icon">
-        </a>
-
-        <a href="https://www.linkedin.com" aria-label="LinkedIn">
-            <img src="../images/linkedin.svg" alt="LinkedIn icon">
-        </a>
-
-        <a href="https://www.instagram.com" aria-label="Instagram">
-            <img src="../images/insta.svg" alt="Instagram icon">
-        </a>
-
-        <a href="https://www.facebook.com" aria-label="Facebook">
-            <img src="../images/facebook.svg" alt="Facebook icon">
-        </a>
+      <a href="https://github.com" aria-label="GitHub">
+        <img src="../images/github.svg" alt="GitHub icon">
+      </a>
+      <a href="https://www.linkedin.com" aria-label="LinkedIn">
+        <img src="../images/linkedin.svg" alt="LinkedIn icon">
+      </a>
+      <a href="https://www.instagram.com" aria-label="Instagram">
+        <img src="../images/insta.svg" alt="Instagram icon">
+      </a>
+      <a href="https://www.facebook.com" aria-label="Facebook">
+        <img src="../images/facebook.svg" alt="Facebook icon">
+      </a>
     </div>
 
     <div class="footer-info">
-        <p>Jéssica Seniw | WDD 231</p>
+      <p>Jéssica Seniw | WDD 231</p>
 
-        <p>
-            Cachoeirinha Chamber of Commerce<br>
-            Email: info@cachoeirinhachamber.org<br>
-            Phone: +55 (51) 99999-9999
-        </p>
+      <p>
+        Cachoeirinha Chamber of Commerce<br>
+        Email: info@cachoeirinhachamber.org<br>
+        Phone: +55 (51) 99999-9999
+      </p>
 
-        <p>
-            &copy; <span id="currentyear"></span> |
-            <span id="lastModified"></span>
-        </p>
+      <p>
+        &copy; <span id="currentyear"></span> |
+        <span id="lastModified"></span>
+      </p>
     </div>
-</footer>
+  </footer>
 
 </body>
-
 </html>
