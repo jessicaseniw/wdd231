@@ -537,7 +537,7 @@ dialog button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.6rem;
 
   animation: overlayFadeUp 0.8s ease forwards;
 }
@@ -551,7 +551,7 @@ dialog button {
 }
 
 .sidebar-overlay h3 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   color: #38bdf8;
