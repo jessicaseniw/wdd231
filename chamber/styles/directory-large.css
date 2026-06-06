@@ -142,8 +142,7 @@
 @media (min-width: 768px) {
 
     .discover-grid {
-        grid-template-areas:
-            "sidebar gallery";
+        grid-template-areas: "sidebar gallery";
         grid-template-columns: 300px 1fr;
     }
 

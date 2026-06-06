@@ -1,0 +1,19 @@
+/* DIRECTORY-MEDIUM.CSS */
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+    .discover-grid {
+        grid-template-areas:
+            "sidebar sidebar"
+            "gallery gallery";
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+}
