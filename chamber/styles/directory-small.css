@@ -490,8 +490,6 @@ dialog button {
     border-bottom: none;
 }
 
-/* == NAO MEXER EM NADA ANTES DO DISCOVERY - SMALL ==/*
-
 /* =====================================================
    DISCOVER – SMALL (MOBILE)
    ===================================================== */
@@ -627,7 +625,7 @@ dialog button {
   padding: 1rem;
 }
 
-/* ================= MOBILE CARDS (SEM ANIMAÇÃO) ================= */
+/* ================= MOBILE CARDS (NO ANIMATION) ================= */
 
 .discover-card {
   background: #e5e7eb;

@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================
-     ACTIVITY 11 – VISIT MESSAGE
+     VISIT MESSAGE
      ========================= */
   const visitToast = document.getElementById("visitToast");
 

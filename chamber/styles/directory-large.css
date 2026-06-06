@@ -1,8 +1,4 @@
 /* =================================================
-   DIRECTORY-LARGE.CSS
-   ================================================= */
-
-/* =================================================
    BASE – LARGE (≥768px)
    ================================================= */
 @media (min-width: 768px) {
@@ -150,7 +146,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding: 0; /* remove espaço acima */
+    padding: 0;
   }
 
   .sidebar {
@@ -227,7 +223,6 @@
     transform: scale(1.05);
   }
 
-  /* sombra inferior */
   .card-front figure::after {
     content: "";
     position: absolute;

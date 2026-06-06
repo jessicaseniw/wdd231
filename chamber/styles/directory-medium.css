@@ -20,7 +20,7 @@
 
   .discover-card {
     perspective: 1200px;
-    height: 340px; /* ajuste para desktop */
+    height: 340px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -77,7 +77,6 @@
     transform: scale(1.05);
   }
 
-  /* sombra inferior */
   .card-front figure::after {
     content: "";
     position: absolute;
@@ -121,8 +120,8 @@
   }
 
    .card-back button {
-    margin: 1rem auto 0 auto; /* margem superior + centralização horizontal */
-    display: block; /* permite centralizar com auto margin */
+    margin: 1rem auto 0 auto;
+    display: block;
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     border: none;
     color: #fff;
