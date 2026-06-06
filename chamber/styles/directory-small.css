@@ -752,3 +752,28 @@ dialog button {
     transform: translateY(0);
   }
 }
+
+/* ================= MOBILE: SHOW FULL CONTENT ================= */
+
+@media (max-width: 640px) {
+
+  .card-inner {
+    transform: none !important;
+  }
+
+  .card-back {
+    display: flex !important;
+    position: static;
+    transform: none !important;
+    padding: 0 1rem 1rem;
+  }
+
+  .discover-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-front {
+    display: block;
+  }
+}
