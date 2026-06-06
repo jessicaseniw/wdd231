@@ -1,15 +1,70 @@
-/* DIRECTORY-MEDIUM.CSS */
+/* ===============================
+   DIRECTORY – MEDIUM (641px–1024px)
+   =============================== */
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 641px) and (max-width: 1024px) {
 
+  /* Layout principal */
   .discover-grid {
-    grid-template-areas:
-      "sidebar"
-      "gallery";
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
   }
+
+  /* ===============================
+     Gallery com NAMED GRID AREAS
+     =============================== */
 
   .gallery {
-    grid-template-columns: repeat(4, 300px);
-    justify-content: center;
+    display: grid;
+    width: 100%;
+    padding: 1.5rem;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+
+    gap: 1rem;
+    box-sizing: border-box;
   }
+
+  /* ===============================
+     Associação dos cards às áreas
+     =============================== */
+
+  .discover-card:nth-child(1) { grid-area: card1; }
+  .discover-card:nth-child(2) { grid-area: card2; }
+  .discover-card:nth-child(3) { grid-area: card3; }
+  .discover-card:nth-child(4) { grid-area: card4; }
+  .discover-card:nth-child(5) { grid-area: card5; }
+  .discover-card:nth-child(6) { grid-area: card6; }
+  .discover-card:nth-child(7) { grid-area: card7; }
+  .discover-card:nth-child(8) { grid-area: card8; }
+
+  /* ===============================
+     Imagens dos cards
+     =============================== */
+
+  .discover-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ===============================
+   DISCOVER – FULL WIDTH FIX
+   =============================== */
+
+    .discover-grid {
+    width: 100%;
+    max-width: none;   /* REMOVE limite */
+    margin: 0;         /* REMOVE centralização */
+    padding: 0;
+    }
+
 }

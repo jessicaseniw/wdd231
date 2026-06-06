@@ -1,42 +1,80 @@
 import { discoverItems } from "../data/discovery.mjs";
 
-const gallery = document.querySelector(".gallery");
+/* =========================
+   DOM READY
+   ========================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-discoverItems.forEach(item => {
-  // Card container
-  const card = document.createElement("section");
-  card.classList.add("discover-card");
+  /* =========================
+     DISCOVER CARDS
+     ========================= */
+  const gallery = document.querySelector(".gallery");
 
-  // Title
-  const title = document.createElement("h2");
-  title.textContent = item.name;
+  if (gallery) {
+    discoverItems.forEach(item => {
 
-  // Figure + Image
-  const figure = document.createElement("figure");
+      const card = document.createElement("section");
+      card.classList.add("discover-card");
 
-  const img = document.createElement("img");
-  img.src = item.image;
-  img.alt = item.name;
-  img.loading = "lazy";
-  img.width = 300;
-  img.height = 200;
+      const title = document.createElement("h2");
+      title.textContent = item.name;
 
-  figure.appendChild(img);
+      const figure = document.createElement("figure");
 
-  // Address
-  const address = document.createElement("address");
-  address.textContent = item.address;
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = item.name;
+      img.loading = "lazy";
+      img.width = 300;
+      img.height = 200;
 
-  // Description
-  const description = document.createElement("p");
-  description.textContent = item.description;
+      figure.appendChild(img);
 
-  // Button
-  const button = document.createElement("button");
-  button.textContent = "Learn More";
-  button.type = "button";
+      const address = document.createElement("address");
+      address.textContent = item.address;
 
-  // Assemble card
-  card.append(title, figure, address, description, button);
-  gallery.appendChild(card);
+      const description = document.createElement("p");
+      description.textContent = item.description;
+
+      const button = document.createElement("button");
+      button.textContent = "Learn More";
+      button.type = "button";
+
+      card.append(title, figure, address, description, button);
+      gallery.appendChild(card);
+    });
+  }
+
+  /* =========================
+     ACTIVITY 11 – VISIT MESSAGE
+     ========================= */
+  const visitToast = document.getElementById("visitToast");
+
+  if (visitToast) {
+    const MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const now = Date.now();
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    let message = "";
+
+    if (!lastVisit) {
+      message = "Welcome! Let us know if you have any questions.";
+    } else {
+      const daysBetween = Math.floor((now - lastVisit) / MS_PER_DAY);
+
+      if (daysBetween < 1) {
+        message = "Back so soon! Awesome!";
+      } else if (daysBetween === 1) {
+        message = "You last visited 1 day ago.";
+      } else {
+        message = `You last visited ${daysBetween} days ago.`;
+      }
+    }
+
+    visitToast.textContent = message;
+    visitToast.classList.add("show");
+
+    localStorage.setItem("lastVisit", now);
+  }
+
 });

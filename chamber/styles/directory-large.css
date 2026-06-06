@@ -1,17 +1,13 @@
-/* DIRECTORY-LARGE.CSS */
-
+/* DIRECTORY-LARGE.CSS */ 
 @media (min-width: 768px) {
-
-    /* ================= Navigation ================= */
-
-    #menuButton {
-        display: none;
+    
+    /* ================= Navigation ================= */ 
+    #menuButton { 
+        display: none; 
+    } 
+    .navigation { 
+        padding: 1rem 3rem; 
     }
-
-    .navigation {
-        padding: 1rem 3rem;
-    }
-
     .navigation ul {
         position: static;
         display: flex !important;
@@ -22,91 +18,89 @@
         width: auto;
         padding: 0;
     }
-
+    
     /* ================= Main ================= */
-
     main {
         padding: 2rem 3rem;
     }
-
-    /* =====================================================
-       HOME PAGE
-    ===================================================== */
-
+    
+    /* ================================================= HOME PAGE ================================================= */
     /* HERO */
-
     .hero img {
         height: 500px;
     }
-
+    
     .hero-content h2 {
         font-size: 3rem;
     }
-
+    
     /* WEATHER */
-
     .weather-card {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-
-    .weather-item {
+    
+    .weather-item { 
         flex: 1;
     }
-
+    
     .weather-item:not(:last-child) {
         border-right: 1px solid #cbd5e1;
         padding-right: 2rem;
     }
-
+    
     .weather-main {
         justify-content: flex-start;
         text-align: left;
     }
-
+    
     /* BOTTOM GRID */
-
     .bottom-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
         align-items: start;
     }
-
+    
     /* COMMUNITY */
-
     .community-card {
         height: 100%;
     }
-
+    
     /* SPOTLIGHT */
-
     .spotlight-card {
         height: 100%;
     }
-
-    #spotlights .business {
+    
+    #spotlights
+    .business {
         align-items: flex-start;
     }
-
-    #spotlights .business img {
+    
+    #spotlights
+    .business img {
         width: 220px;
         height: 140px;
     }
 
+    /* == NAO MEXER EM NADA ANTES DO DISCOVERY PAGE ==/*
+    
     /* ================= DIRECTORY PAGE ================= */
-
-    #members.grid-view {
+    
+    #members
+    .grid-view {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    #members.list-view .member-card {
+    
+    #members
+    .list-view
+    .member-card {
         text-align: left;
     }
-
+    
     /* ================= JOIN PAGE ================= */
-
+    
     .join-container {
         display: grid;
         grid-template-columns: minmax(500px, 700px) 320px;
@@ -114,41 +108,58 @@
         justify-content: center;
         align-items: start;
     }
-
+    
     .join-form {
         width: 100%;
     }
+    
+    .membership-cards { 
+        width: 320px; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 1rem; 
+    } 
+    
+    /* ================= Footer ================= */ 
+    footer { 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        text-align: left; 
+        padding: 1rem 3rem; 
+    } 
+} 
 
-    .membership-cards {
-        width: 320px;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+/* ===== DISCOVER PAGE ===== */ 
+@media (min-width: 1025px) { 
+    .discover-grid { 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+    } 
+    
+    .gallery { 
+        display: grid; 
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+        gap: 1.5rem; 
+        width: 100%; 
+    } 
+    
+    .discover-card img { 
+        width: 100%; 
+        height: 190px; 
+        object-fit: cover; 
+    } 
 
-    /* ================= Footer ================= */
+    /* ===============================
+   DISCOVER – FULL WIDTH FIX
+   =============================== */
 
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 1rem 3rem;
+    .discover-grid {
+    width: 100%;
+    max-width: none;   /* REMOVE limite */
+    margin: 0;         /* REMOVE centralização */
+    padding: 0;
     }
 }
 
-/* ===== DISCOVER PAGE ===== */
-@media (min-width: 900px) {
-
-  .discover-grid {
-    grid-template-areas:
-      "sidebar"
-      "gallery";
-    grid-template-columns: 1fr;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(4, 300px);
-    justify-content: center;
-  }
-}
