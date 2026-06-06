@@ -1,0 +1,118 @@
+<!-- CHAMBER INDEX -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamber Discovery | WDD 231</title>
+
+    <meta name="description"
+        content="Community highlights, local business spotlights, weather updates, and calls to action for the Cachoeirinha Chamber of Commerce.">
+    <meta name="author" content="Jéssica Seniw">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cachoeirinha Chamber of Commerce">
+    <meta property="og:description"
+        content="Supporting local businesses, encouraging growth, and strengthening community connections.">
+    <meta property="og:image" content="https://jessicaseniw.github.io/wdd231/chamber/images/chamber-social.png">
+    <meta property="og:url" content="https://jessicaseniw.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+
+    <!-- Base site layout -->
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/large.css">
+
+    <!-- Chamber specific -->
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+
+    <!-- JavaScript -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+
+    <!-- HOME PAGE JS -->
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.svg" alt="Cachoeirinha Chamber logo" loading="lazy">
+            </a>
+
+            <p>Cachoeirinha Chamber of Commerce</p>
+
+            <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Chamber</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    
+    </main>
+
+    <footer>
+        <div class="icon-social">
+            <a href="https://github.com" aria-label="GitHub">
+                <img src="../images/github.svg" alt="GitHub icon">
+            </a>
+
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">
+                <img src="../images/linkedin.svg" alt="LinkedIn icon">
+            </a>
+
+            <a href="https://www.instagram.com" aria-label="Instagram">
+                <img src="../images/insta.svg" alt="Instagram icon">
+            </a>
+
+            <a href="https://www.facebook.com" aria-label="Facebook">
+                <img src="../images/facebook.svg" alt="Facebook icon">
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <p>Jéssica Seniw | WDD 231</p>
+
+            <p>
+                Cachoeirinha Chamber of Commerce<br>
+                Email: info@cachoeirinhachamber.org<br>
+                Phone: +55 (51) 99999-9999
+            </p>
+
+            <p>
+                &copy; <span id="currentyear"></span> |
+                <span id="lastModified"></span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
