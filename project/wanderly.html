@@ -1,0 +1,96 @@
+<!-- wanderly.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wanderly | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search destinations and plan your next trip with Wanderly.">
+    <meta name="author" content="Jéssica Seniw">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/wanderly.css">
+    <link rel="stylesheet" href="styles/wanderly-large.css">
+    <script src="scripts/wanderly.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Wanderly</h1>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="wanderly.html">Destinations</a></li>
+                <li><a href="listings.html">Accommodations</a></li>
+                <li><a href="trips.html">My Trips</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <span class="route-display" id="selected-route">...</span>
+
+            <select id="currency">
+                <option value="USD">USD</option>
+                <option value="BRL">BRL</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <h2>Find Your Next Trip</h2>
+
+                <form id="searchForm" class="search-form">
+
+                    <div class="form-field">
+                        <label for="origin">Origin</label>
+                        <select id="origin" required>
+                            <option value="">Select origin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout">
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <section id="destinations">
+            <h2>Available Destinations</h2>
+
+            <h3 class="section-subtitle">National</h3>
+            <div class="grid national-grid"></div>
+
+            <h3 class="section-subtitle">International</h3>
+            <div class="grid international-grid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wanderly | WDD 131 Project</p>
+        <a href="references.html">References</a>
+    </footer>
+</body>
+
+</html>

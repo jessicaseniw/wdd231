@@ -1,0 +1,66 @@
+<!-- trips.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wanderly | My Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your saved trips.">
+    <meta name="author" content="Jéssica Seniw">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/wanderly.css">
+    <link rel="stylesheet" href="styles/wanderly-large.css">
+    <script src="scripts/wanderly.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>Wanderly</h1>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="wanderly.html">Destinations</a></li>
+                <li><a href="listings.html">Accommodations</a></li>
+                <li><a href="trips.html">My Trips</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <span class="route-display" id="selected-route">...</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- TRIP SUMMARY -->
+        <section id="trip-summary">
+            <button class="change-btn" onclick="changeDestination()">Change destination</button>
+            <h2>Trip Summary</h2>
+
+            <div class="summary-content">
+                <!-- Block 1: Destination, dates, and accommodation -->
+                <div id="trip-info" class="card"></div>
+
+                <!-- Block 2: Prices -->
+                <div id="trip-values" class="card"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wanderly | WDD 131 Project</p>
+        <a href="references.html">References</a>
+    </footer>
+</body>
+
+</html>

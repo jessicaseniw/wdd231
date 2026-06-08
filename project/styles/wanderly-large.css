@@ -1,0 +1,126 @@
+/* =========================================
+   WANDERLY LARGE SCREEN STYLES
+========================================= */
+@media (min-width: 900px) {
+
+    /* ===== MAIN ===== */
+    main {
+        padding: 2rem 0;
+    }
+
+    /* ===== HEADER ===== */
+    .main-header {
+        margin-bottom: 3rem;
+    }
+
+    #listings>h2 {
+        margin-top: 0.6rem;
+    }
+
+    header {
+        padding: 1.2rem 3rem;
+    }
+
+    nav ul {
+        gap: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .search-summary {
+        margin-top: 3rem;
+        /* more breathing space on desktop */
+    }
+
+    /* ===== HERO (FIXED) ===== */
+    .hero {
+        height: auto;
+        /* 🔴 REMOVE the blank space */
+        padding: 1.5rem 1rem;
+        /* elegant spacing, not exaggerated */
+        align-items: center;
+    }
+
+    .hero-overlay {
+        max-width: 700px;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* ===== SEARCH FORM ===== */
+    #searchForm {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    #searchForm select {
+        flex: 1;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    section h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+        gap: 2.5rem;
+        padding: 0 3rem 4rem;
+    }
+
+    .national-grid,
+    .international-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .card img {
+        width: 200px;
+        height: 120px;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ===== MODAL ===== */
+    .modal-content {
+        max-width: 500px;
+        padding: 2.5rem;
+    }
+
+    .modal-buttons button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        padding: 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
