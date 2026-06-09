@@ -1,459 +1,70 @@
 /* =========================================
-   GLOBAL RESET
+MOBILE & TABLET OVERRIDES
 ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-    line-height: 1.6;
-}
+@media (max-width: 899px) {
 
-img {
-    max-width: 100%;
-    display: block;
-}
+    .main-header {
+        padding: 0 1rem;
+    }
 
-/* =========================================
-   HEADER
-========================================= */
-header {
-    margin-bottom: 0;
-}
+    .main-nav ul {
+        gap: 1rem;
+    }
 
-.main-header {
-    background-color: #2f5d7c;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-}
+    .hero {
+        padding: .5rem 1rem;
+        align-items: flex-start;
+    }
 
-.logo h1 {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
+    .hero-overlay {
+        max-width: 600px;
+    }
 
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    .hero h2 {
+        font-size: 1.8rem;
+    }
 
-.main-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
-}
+    .search-summary {
+        margin-top: 1.2rem;
 
-.main-nav a:hover {
-    opacity: 0.7;
-}
+        flex-direction: column;
+        align-items: stretch;
 
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+        gap: 1rem;
+    }
 
-#currency {
-    padding: 0.35rem 0.6rem;
-    border-radius: 6px;
-    border: none;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
+    #searchForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-/* =========================================
-   TITLES
-========================================= */
-/* H2 - principais seções */
-h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2f5d7c;
-    margin-bottom: 0.6rem;
-    text-align: center;
-    position: relative;
-    letter-spacing: 0.5px;
-}
+    .grid {
+        grid-template-columns: 1fr;
 
-/* Adicionando linha decorativa abaixo do H2 */
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #f4a261;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-}
+        gap: 2rem;
 
-/* H3 - subtítulos ou títulos de card */
-h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #2f5d7c;
-    margin: 0.8rem 0 0.4rem;
-    text-align: center;
-    position: relative;
-    letter-spacing: 0.3px;
-}
+        padding: 0 1rem 2rem;
+    }
 
-/* Linha decorativa abaixo do H3 */
-h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #f4a261;
-    margin: 0.4rem auto 0;
-    border-radius: 2px;
-}
+    .card img {
+        width: 100%;
+        height: 210px;
+    }
 
-#trip-summary {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
+    .summary-content {
+        flex-direction: column;
+    }
 
-#trip-summary h2 {
-    margin-bottom: 1.5rem;
-}
+    .destination-summary,
+    .accommodation-summary,
+    .total-summary {
+        flex: 1 1 100%;
+    }
 
-.summary-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-around;
-}
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
 
-.destination-summary,
-.accommodation-summary,
-.total-summary {
-    text-align: center;
-    flex: 1 1 300px;
-}
-
-.destination-summary img,
-.accommodation-summary img {
-    width: 100%;
-    max-width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 0.5rem;
-}
-
-.total-summary p {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #f4a261;
-    margin-top: 0.5rem;
-}
-
-/* =========================================
-   ROUTE DISPLAY
-========================================= */
-.route-display {
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.9rem;
-    background-color: rgba(244, 162, 97, 0.8);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-}
-
-/* =========================================
-   HERO COMPACTO
-========================================= */
-.hero {
-    width: 100%;
-    height: auto;
-    padding: 0.5rem 1rem;
-    background-color: #f4f6f8;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.hero-overlay {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.hero h2 {
-    font-size: 1.8rem;
-    color: #2f5d7c;
-    margin: 0 0 0.3rem 0;
-    text-align: center;
-}
-
-/* =========================================
-   SELECTED DESTINATION
-========================================= */
-#selected-destination {
-    max-width: 700px;
-    margin: 1.5rem auto 2rem;
-    padding: 1.5rem 2rem;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    text-align: center;
-}
-
-#selected-destination h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #2f5d7c;
-}
-
-#destination-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #f4a261;
-    margin-bottom: 1rem;
-}
-
-#selected-destination button {
-    margin-top: 0.5rem;
-}
-
-/* =========================================
-   SEARCH SUMMARY
-========================================= */
-.search-summary {
-    max-width: 1200px;
-    margin: 1.2rem auto 0.4rem;
-    padding: 1rem 1.5rem;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.search-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.search-info .label {
-    font-size: 0.85rem;
-    color: #6c757d;
-}
-
-#current-destination {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2f5d7c;
-}
-
-.change-btn {
-    padding: 0.6rem 1.5rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #f4a261;
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.change-btn:hover {
-    background-color: #e5943f;
-    transform: scale(1.05);
-}
-
-/* =========================================
-   SEARCH FORM
-========================================= */
-#searchForm {
-    margin: 0;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-#searchForm select,
-#searchForm input[type="date"] {
-    padding: 0.6rem 1rem;
-    border-radius: 30px;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-#searchForm select {
-    width: 100%;
-    max-width: 320px;
-    appearance: none;
-    background-color: #f4a261;
-    color: #fff;
-    padding-right: 2.5rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5l6 6 6-6' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 14px;
-}
-
-#searchForm select:hover {
-    transform: scale(1.02);
-}
-
-#searchForm select:focus {
-    box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.4);
-}
-
-/* =========================================
-   CARD GRID
-========================================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0 2rem 3rem;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px;
-    padding-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-}
-
-.card img {
-    width: auto;
-    max-width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto 0.5rem;
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2f5d7c;
-    margin: 1rem 0 0.4rem;
-    text-align: center;
-}
-
-.card h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #f4a261;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-}
-
-.card p {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.card button {
-    display: block;
-    margin: 0 auto;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #2f5d7c;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(244, 162, 97, 0.6);
-}
-
-/* =========================================
-   SELECTED CARD STATES
-========================================= */
-.card.selected {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px;
-}
-
-.card.selected button {
-    background-color: #f4a261;
-}
-
-.card.selected button:hover {
-    background-color: #e5943f;
-}
-
-/* Layout flex para trip-summary lado a lado */
-#trip-summary .summary-content {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* para mobile */
-}
-
-#trip-summary .summary-content .card {
-    flex: 1;
-    min-width: 280px;
-    /* evita blocos muito estreitos em telas pequenas */
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-footer {
-    background-color: #2f5d7c;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 1rem;
-}
-
-footer a {
-    color: #f4a261;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
