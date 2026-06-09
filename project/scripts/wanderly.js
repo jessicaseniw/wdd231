@@ -409,7 +409,7 @@ function setupDestinationButtons() {
             localStorage.setItem(DESTINATION_KEY, destinationName);
 
             // Redirect directly to the accommodations page
-            window.location.href = 'listings.html';
+            window.location.href = 'accommodations.html';
         });
     });
 }
@@ -538,9 +538,9 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRoute();
     displayStayPeriod();
 
-    // Render cards if on wanderly.html or listings.html
-    const listingsSection = document.getElementById('listings');
-    if (listingsSection) {
+    // Render cards if on wanderly.html or accommodations.html
+    const accommodationsSection = document.getElementById('accommodations');
+    if (accommodationsSection) {
         renderAccommodations();
         const currentDest = localStorage.getItem(DESTINATION_KEY);
         if (currentDest) {
