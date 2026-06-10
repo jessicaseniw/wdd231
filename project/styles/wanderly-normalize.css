@@ -1,210 +1,167 @@
 /* =========================================
-WANDERLY NORMALIZE
+WANDERLY NORMALIZE (CLEAN VERSION)
 ========================================= */
 
-/* ===== RESET ===== */
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-
-/* ===== VARIABLES ===== */
-
-:root {
---primary: #2f5d7c;
---secondary: #f4a261;
-
---background: #f4f6f8;
---text: #333;
---white: #ffffff;
-
---radius-sm: 8px;
---radius-md: 12px;
---radius-lg: 16px;
-
---shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
---shadow-md: 0 8px 20px rgba(0, 0, 0, 0.06);
---shadow-lg: 0 14px 30px rgba(0, 0, 0, 0.15);
-
 }
 
-/* ===== BASE ===== */
+/* VARIABLES */
+:root {
+  --primary: #2f5d7c;
+  --secondary: #f4a261;
 
+  --background: #f4f6f8;
+  --text: #333;
+  --white: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* BASE */
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-font-family: "Poppins", sans-serif;
-background-color: var(--background);
-color: var(--text);
-line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 img {
-display: block;
-max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 a {
-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-list-style: none;
+  list-style: none;
 }
 
-button,
-input,
-select {
-font-family: inherit;
-}
-
-/* ===== TYPOGRAPHY ===== */
-
+/* TYPOGRAPHY */
 h2 {
-font-size: 2rem;
-font-weight: 700;
-color: var(--primary);
-text-align: center;
-margin-bottom: 0.6rem;
-letter-spacing: 0.5px;
-}
-
-h2::after {
-content: "";
-display: block;
-width: 60px;
-height: 3px;
-background: var(--secondary);
-margin: 0.5rem auto 0;
-border-radius: 2px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.6rem;
 }
 
 h3 {
-font-size: 1.4rem;
-font-weight: 600;
-color: var(--primary);
-text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
 }
 
-h3::after {
-content: "";
-display: block;
-width: 40px;
-height: 3px;
-background: var(--secondary);
-margin: 0.4rem auto 0;
-border-radius: 2px;
-}
-
-/* ===== HEADER ===== */
-
+/* HEADER */
 .main-header {
-height: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-background: var(--primary);
-
-padding: 0 2rem;
-
+  background: var(--primary);
+  padding: 0 2rem;
 }
 
 .logo h1 {
-color: var(--white);
-font-size: 1.8rem;
-font-weight: 600;
+  color: var(--white);
+  font-size: 1.8rem;
 }
 
-/* ===== NAV ===== */
-
+/* NAV */
 .main-nav ul {
-display: flex;
-gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .main-nav a {
-color: var(--white);
-font-weight: 500;
-transition: opacity .3s ease;
+  color: var(--white);
+  font-weight: 500;
 }
 
-.main-nav a:hover {
-opacity: .7;
-}
-
-/* ===== HEADER ACTIONS ===== */
-
+/* HEADER ACTIONS */
 .header-actions {
-display: flex;
-align-items: center;
-gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-#currency {
-border: none;
-border-radius: var(--radius-sm);
-padding: .35rem .6rem;
-cursor: pointer;
+/* BUTTONS */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
 }
 
-/* ===== BUTTONS ===== */
-
+/* primary button reusable */
 .btn-primary {
-border: none;
-border-radius: 20px;
-
-padding: .7rem 1.5rem;
-
-background: var(--primary);
-color: var(--white);
-
-cursor: pointer;
-
-transition: .3s ease;
-
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 0.7rem 1.5rem;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-.btn-secondary {
-background: var(--secondary);
-}
-
-/* ===== HELPERS ===== */
-
-.container {
-width: min(1200px, 90%);
-margin: 0 auto;
-}
-
-.section {
-padding: 2rem 0;
-}
-
-/* ===== FOOTER ===== */
-
+/* FOOTER */
 footer {
-background: var(--primary);
-color: var(--white);
-
-text-align: center;
-
-padding: 2rem 1rem;
-
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
 footer a {
-color: var(--secondary);
+  color: var(--secondary);
 }
 
-footer a:hover {
-text-decoration: underline;
+/* =========================================
+BOOKING STEPS (IMPORTANT FIX)
+========================================= */
+
+.booking-steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: #e9ecef;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.step.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.step.completed {
+  background: var(--secondary);
+  color: var(--white);
 }

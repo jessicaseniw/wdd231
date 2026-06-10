@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/wanderly-normalize.css">
 
     <!-- JavaScript -->
+    <script src="scripts/data.js" defer></script>
     <script src="scripts/wanderly.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +33,12 @@
         </div>
 
         <nav class="main-nav">
-            <ul>
-                <li><a href="wanderly.html">Destinations</a></li>
-                <li><a href="acommodations.html">Acommodations</a></li>
-                <li><a href="trips.html">My Trips</a></li>
-            </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="wanderly.html">Destinations</a></li>
+                    <li><a href="accommodations.html">Accommodations</a></li>
+                    <li><a href="trips.html" class="active">My Trips</a></li>
+                </ul>
         </nav>
 
         <div class="header-actions">
@@ -44,11 +46,19 @@
         </div>
     </header>
 
+    <section class="booking-steps">
+        <div class="step completed">1. Destination</div>
+        <div class="step completed">2. Accommodation</div>
+        <div class="step active" aria-current="step"> 3. Trip Summary</div>
+    </section>
+
+    
+
     <main>
         <!-- TRIP SUMMARY -->
         <section id="trip-summary">
             <button class="change-btn" onclick="changeDestination()">Change destination</button>
-            <h2>Trip Summary</h2>
+            <h2>Review Your Booking</h2>
 
             <div class="summary-content">
                 <!-- Block 1: Destination, dates, and accommodation -->
@@ -58,6 +68,21 @@
                 <div id="trip-values" class="card"></div>
             </div>
         </section>
+
+        <div class="trip-actions">
+
+            <button class="secondary-btn"
+                    onclick="window.location.href='accommodations.html'">
+                Change Accommodation
+            </button>
+
+            <button
+                type="button" class="primary-btn" id="confirm-booking"> Confirm Booking
+            </button>
+
+        </div>
+
+        <div id="booking-message" aria-live="polite"></div>
     </main>
 
     <footer>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/wanderly-normalize.css">
 
     <!-- JavaScript -->
+    <script src="scripts/data.js" defer></script>
     <script src="scripts/wanderly.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +33,9 @@
 
         <nav class="main-nav">
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="wanderly.html">Destinations</a></li>
-                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="accommodations.html" class="active">Accommodations</a></li>
                 <li><a href="trips.html">My Trips</a></li>
             </ul>
         </nav>
@@ -43,27 +45,37 @@
         </div>
     </header>
 
+    <section class="booking-steps">
+        <div class="step completed">1. Destination</div>
+        <div class="step active" aria-current="step"> 2. Accommodation</div>
+        <div class="step">3. Trip Summary</div>
+    </section>
+
     <section class="search-summary">
+
         <div class="search-info">
-            <span class="label">Destination</span>
+            <span class="label">Selected destination</span>
             <strong id="current-destination"></strong>
-            <span id="stay-period" class="stay-period"></span>
+            <span id="stay-period"></span>
         </div>
 
         <button class="change-btn" onclick="changeDestination()">
-            Change destination
+            ← Change destination
         </button>
+
     </section>
 
     <main>
         <section id="accommodations">
-            <h2>Available Accommodations</h2>
 
-            <h3 class="section-subtitle">National</h3>
+            <h2>Choose Your Accommodation</h2>
+
+            <p class="page-description">
+                Select the accommodation that best fits your trip.
+            </p>
+
             <div class="grid national-grid"></div>
 
-            <h3 class="section-subtitle">International</h3>
-            <div class="grid international-grid"></div>
         </section>
     </main>
 

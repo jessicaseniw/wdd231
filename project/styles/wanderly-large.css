@@ -1,260 +1,171 @@
 /* =========================================
-WANDERLY DESKTOP STYLES
+DESKTOP STYLES (CLEAN VERSION)
 ========================================= */
 
 main {
-padding: 2rem 0;
+  padding: 2rem 0;
 }
 
-/* ===== HERO ===== */
-
+/* HERO */
 .hero {
-width: 100%;
-padding: 1.5rem 1rem;
-
-display: flex;
-justify-content: center;
-align-items: center;
-
+  width: 100%;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-overlay {
-width: 100%;
-max-width: 700px;
-
-text-align: center;
-
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
 }
 
 .hero h2 {
-font-size: 3rem;
+  font-size: 2.6rem;
 }
 
-/* ===== SEARCH FORM ===== */
-
+/* SEARCH FORM */
 #searchForm {
-max-width: 600px;
-margin: 0 auto;
-
-display: flex;
-gap: .5rem;
-
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 #searchForm select,
 #searchForm input[type="date"] {
-flex: 1;
-
-border: none;
-border-radius: 30px;
-
-padding: 1rem 1.5rem;
-
+  flex: 1;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 1.2rem;
 }
 
 #searchForm select {
-background: var(--secondary);
-color: white;
+  background: var(--secondary);
+  color: white;
 }
 
-/* ===== SEARCH SUMMARY ===== */
-
+/* SEARCH SUMMARY */
 .search-summary {
-max-width: 1200px;
+  max-width: 1200px;
+  margin: 3rem auto 1rem;
+  padding: 1rem 1.5rem;
 
-margin: 3rem auto 1rem;
-padding: 1rem 1.5rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 
-background: white;
-
-border-radius: var(--radius-lg);
-box-shadow: var(--shadow-md);
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .search-info {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .search-info .label {
-font-size: .85rem;
-color: #777;
+  font-size: 0.85rem;
+  color: #777;
 }
 
 #current-destination {
-color: var(--primary);
-font-weight: 600;
+  color: var(--primary);
+  font-weight: 600;
 }
 
-/* ===== GRID ===== */
-
+/* GRID */
 .grid {
-display: grid;
-gap: 2.5rem;
-
-padding: 0 3rem 4rem;
-
+  display: grid;
+  gap: 2rem;
+  padding: 0 1.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .national-grid,
 .international-grid {
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* ===== CARDS ===== */
-
+/* CARDS */
 .card {
-background: white;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
 
-border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-padding: 1.5rem;
-
-display: flex;
-flex-direction: column;
-align-items: center;
-
-box-shadow: var(--shadow-md);
-
-transition: .3s ease;
-
+  box-shadow: var(--shadow-md);
+  transition: 0.3s ease;
 }
 
 .card img {
-width: 200px;
-height: 120px;
-
-object-fit: cover;
-
-border-radius: var(--radius-md);
-
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .card p {
-text-align: center;
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card button {
-border: none;
-
-border-radius: 20px;
-
-padding: .5rem 1.2rem;
-
-background: var(--primary);
-color: white;
-
-cursor: pointer;
-
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
 }
 
 .card:hover {
-transform: translateY(-6px);
-box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
 }
 
 .card.selected {
-transform: scale(1.05);
+  transform: scale(1.03);
+  border: 2px solid var(--secondary);
 }
 
-.card.selected button {
-background: var(--secondary);
-}
-
-/* ===== DESTINATION ===== */
-
-#selected-destination {
-max-width: 700px;
-
-margin: 1.5rem auto 2rem;
-padding: 1.5rem 2rem;
-
-background: white;
-
-border-radius: var(--radius-lg);
-
-text-align: center;
-
-}
-
-/* ===== ROUTE DISPLAY ===== */
-
+/* ROUTE DISPLAY */
 .route-display {
-background: rgba(244,162,97,.8);
-
-color: white;
-
-padding: .3rem .8rem;
-
-border-radius: 20px;
-
-font-size: .9rem;
-font-weight: 600;
-
+  background: rgba(244, 162, 97, 0.85);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-/* ===== TRIP SUMMARY ===== */
-
+/* TRIP SUMMARY */
 #trip-summary {
-max-width: 1200px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
 
-margin: 2rem auto;
-padding: 2rem;
-
-background: white;
-
-border-radius: var(--radius-lg);
-box-shadow: var(--shadow-md);
-
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .summary-content {
-display: flex;
-justify-content: space-around;
-gap: 2rem;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.destination-summary,
-.accommodation-summary,
-.total-summary {
-flex: 1 1 300px;
-text-align: center;
-}
-
-.destination-summary img,
-.accommodation-summary img {
-width: 100%;
-max-width: 250px;
-height: 150px;
-
-object-fit: cover;
-
-border-radius: var(--radius-md);
-
-margin: 0 auto;
-
-}
-
+/* TOTAL PRICE */
 .total-summary p {
-color: var(--secondary);
-font-size: 1.2rem;
-font-weight: 700;
-}
-
-/* ===== MODAL ===== */
-
-.modal-content {
-max-width: 500px;
-padding: 2.5rem;
-}
-
-.modal-buttons button {
-padding: .7rem 1.5rem;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 700;
 }
