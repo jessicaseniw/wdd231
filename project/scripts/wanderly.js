@@ -638,12 +638,20 @@ ASYNC DATA LOAD
 
 async function loadDestinations() {
   try {
-    const response = await fetch("data.json");
+    const response = await fetch("./data.json");
     const data = await response.json();
+
     console.log("Loaded data:", data);
+
+    if (data.status === "ok") {
+      document.documentElement.setAttribute("data-api-status", "ok");
+    }
+
     return data;
+
   } catch (error) {
     console.error("Error loading data:", error);
+    document.documentElement.setAttribute("data-api-status", "error");
   }
 }
 
