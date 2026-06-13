@@ -22,6 +22,20 @@ const ACCOMMODATION_PRICE_KEY = 'selectedAccommodationPrice';
 ====================================================== */
 // brazilOrigins, destinations, accommodations are global
 
+function loadFromURL() {
+    const params = new URLSearchParams(window.location.search);
+
+    const origin = params.get('origin');
+    const destination = params.get('destination');
+    const checkin = params.get('checkin');
+    const checkout = params.get('checkout');
+
+    if (origin) localStorage.setItem(ORIGIN_KEY, origin);
+    if (destination) localStorage.setItem(DESTINATION_KEY, destination);
+    if (checkin) localStorage.setItem(CHECKIN_KEY, checkin);
+    if (checkout) localStorage.setItem(CHECKOUT_KEY, checkout);
+}
+
 /* ======================================================
    TRANSLATIONS
 ====================================================== */
@@ -338,9 +352,14 @@ function setupDestinationButtons() {
                 return;
             }
 
-            localStorage.setItem(DESTINATION_KEY, name);
+            const params = new URLSearchParams({
+                origin,
+                destination: name,
+                checkin: localStorage.getItem(CHECKIN_KEY),
+                checkout: localStorage.getItem(CHECKOUT_KEY)
+            });
 
-            window.location.href = 'accommodations.html';
+            window.location.href = `accommodations.html?${params.toString()}`;
         });
     });
 }
@@ -618,6 +637,7 @@ closeBtn?.addEventListener("click", () => {
 ====================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 
+    loadFromURL();
     applyTranslations();
     setupPreferences();
     populateOrigins();
