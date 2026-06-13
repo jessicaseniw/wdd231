@@ -638,7 +638,7 @@ ASYNC DATA LOAD
 
 async function loadDestinations() {
   try {
-    const response = await fetch("scripts/data.json");
+    const response = await fetch("data.json");
     const data = await response.json();
     console.log("Loaded data:", data);
     return data;
