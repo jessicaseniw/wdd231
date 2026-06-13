@@ -643,15 +643,15 @@ async function loadDestinations() {
 
     console.log("Loaded data:", data);
 
-    if (data.status === "ok") {
-      document.documentElement.setAttribute("data-api-status", "ok");
+    if (data.features?.asyncDemo) {
+      document.documentElement.setAttribute("data-async-demo", "true");
     }
 
     return data;
 
   } catch (error) {
     console.error("Error loading data:", error);
-    document.documentElement.setAttribute("data-api-status", "error");
+    document.documentElement.setAttribute("data-async-demo", "error");
   }
 }
 
