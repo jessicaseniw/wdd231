@@ -23,8 +23,8 @@ WANDERLY – SMALL (MOBILE OVERRIDES)
   /* =========================================
   HAMBURGER MENU
   ========================================= */
-   #menu-toggle {
-    display: block;
+  #menu-toggle {
+    display: block !important;
     font-size: 1.8rem;
     background: none;
     border: none;
@@ -34,11 +34,11 @@ WANDERLY – SMALL (MOBILE OVERRIDES)
   }
 
   .main-nav {
-    display: none;
+    display: none !important;
   }
 
   .main-nav.open {
-    display: block;
+    display: block !important;
   }
 
   .main-nav ul {
@@ -79,13 +79,19 @@ WANDERLY – SMALL (MOBILE OVERRIDES)
   SEARCH FORM
   ========================================= */
   #searchForm {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    grid-template-columns: unset !important;
+  }
+
+  #searchForm .form-field {
+    width: 100%;
   }
 
   #searchForm select,
   #searchForm input {
-    min-height: 44px;
+    width: 100%;
   }
 
   /* =========================================

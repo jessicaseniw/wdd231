@@ -231,12 +231,8 @@ function populateOrigins() {
 const menuToggle = document.querySelector("#menu-toggle");
 const nav = document.querySelector(".main-nav");
 
-menuToggle?.addEventListener("click", () => {
+menuToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
-  menuToggle.setAttribute(
-    "aria-expanded",
-    nav.classList.contains("open")
-  );
 });
 
 /* ======================================================
