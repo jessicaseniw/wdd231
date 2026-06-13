@@ -633,6 +633,21 @@ closeBtn?.addEventListener("click", () => {
 });
 
 /* ======================================================
+ASYNC DATA LOAD
+====================================================== */
+
+async function loadDestinations() {
+  try {
+    const response = await fetch("scripts/data.json");
+    const data = await response.json();
+    console.log("Loaded data:", data);
+    return data;
+  } catch (error) {
+    console.error("Error loading data:", error);
+  }
+}
+
+/* ======================================================
    INIT
 ====================================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -644,6 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRoute();
     displayStay();
     displayCurrentDestination();
+    loadDestinations();
 
     const isAcc = document.getElementById('accommodations');
     const isTrips = document.getElementById('trip-summary');
