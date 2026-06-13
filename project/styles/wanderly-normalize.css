@@ -1,5 +1,5 @@
 /* =========================================
-WANDERLY NORMALIZE (CLEAN VERSION)
+WANDERLY NORMALIZE
 ========================================= */
 
 /* RESET */
@@ -11,16 +11,20 @@ WANDERLY NORMALIZE (CLEAN VERSION)
 
 /* VARIABLES */
 :root {
-  --primary: #2f5d7c;
-  --secondary: #f4a261;
+  --primary: #17324d;
+  --secondary: #e76f51;
+  --accent: #2a9d8f;
 
-  --background: #f4f6f8;
-  --text: #333;
+  --background: #f6f8fb;
+  --surface: #ffffff;
+  --line: #dfe7ef;
+  --muted: #637083;
+  --text: #223044;
   --white: #ffffff;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
 
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -71,13 +75,15 @@ h3 {
 
 /* HEADER */
 .main-header {
-  height: 70px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
-  background: var(--primary);
+  background: #10263d;
   padding: 0 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .logo h1 {
@@ -94,6 +100,12 @@ h3 {
 .main-nav a {
   color: var(--white);
   font-weight: 500;
+  padding: 0.45rem 0;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: #ffd166;
 }
 
 /* HEADER ACTIONS */
@@ -101,6 +113,18 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.header-actions select {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  padding: 0.45rem 0.55rem;
+}
+
+.header-actions option {
+  color: var(--text);
 }
 
 /* BUTTONS */
@@ -112,7 +136,7 @@ button {
 
 /* primary button reusable */
 .btn-primary {
-  background: var(--primary);
+  background: #10263d;
   color: var(--white);
   border-radius: 20px;
   padding: 0.7rem 1.5rem;

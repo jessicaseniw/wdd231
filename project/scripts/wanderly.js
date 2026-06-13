@@ -1,4 +1,8 @@
 /* ======================================================
+   wanderly.js
+====================================================== */
+
+/* ======================================================
    KEYS
 ====================================================== */
 const ORIGIN_KEY = 'selectedOrigin';
@@ -7,6 +11,8 @@ const CURRENCY_KEY = 'selectedCurrency';
 const CHECKIN_KEY = 'checkInDate';
 const CHECKOUT_KEY = 'checkOutDate';
 const LANGUAGE_KEY = 'selectedLanguage';
+const PASSENGERS_KEY = 'selectedPassengers';
+const CABIN_KEY = 'selectedCabin';
 
 const ACCOMMODATION_KEY = 'selectedAccommodation';
 const ACCOMMODATION_PRICE_KEY = 'selectedAccommodationPrice';
@@ -21,7 +27,7 @@ const ACCOMMODATION_PRICE_KEY = 'selectedAccommodationPrice';
 ====================================================== */
 const translations = {
     en: {
-        destinations: "Available Destinations",
+        destinations: "Available flights and destinations",
         national: "National Destinations",
         international: "International Destinations",
         select: "Select",
@@ -30,7 +36,83 @@ const translations = {
         changeDestination: "Change Destination",
         nights: "nights",
         noAccommodations: "No accommodations available for this destination.",
-        selectOrigin: "Select origin"
+        selectOrigin: "Select origin",
+        chooseFlight: "Choose flight",
+        chooseHotel: "Choose hotel",
+        domesticPackage: "Domestic package",
+        internationalPackage: "International package",
+        directOrStop: "Direct or 1 stop",
+        oneTwoStops: "1-2 stops",
+        carryOn: "Carry-on included",
+        checkedBag: "Checked bag available",
+        perPassenger: "per passenger",
+        estimatedAirfare: "estimated airfare",
+        chooseOrigin: "Choose your origin to compare airfare.",
+        selectDeparture: "Select your departure city before choosing a flight.",
+        guestRating: "guest rating",
+        breakfastWifi: "Breakfast | Wi-Fi | Free cancellation",
+        poolTransfer: "Pool | Airport transfer | Flexible rate",
+        perNight: "per night",
+        forStay: "for",
+        night: "night",
+        selectedStay: "selected",
+        bookingConfirmed: "Booking confirmed successfully!",
+        tripDetails: "Trip details",
+        route: "Route",
+        passengers: "Passengers",
+        hotel: "Hotel",
+        dates: "Dates",
+        stay: "Stay",
+        to: "to",
+        priceSummary: "Price summary",
+        airfare: "Round-trip airfare",
+        hotelStay: "Hotel stay",
+        taxes: "Estimated taxes and fees",
+        totalDue: "Total due today"
+    },
+    pt: {
+        destinations: "Voos e destinos disponíveis",
+        national: "Destinos nacionais",
+        international: "Destinos internacionais",
+        select: "Selecionar",
+        selected: "Selecionado",
+        from: "De",
+        changeDestination: "Alterar destino",
+        nights: "noites",
+        noAccommodations: "Nenhuma acomodação disponível para este destino.",
+        selectOrigin: "Selecione a origem",
+        chooseFlight: "Escolher voo",
+        chooseHotel: "Escolher hotel",
+        domesticPackage: "Pacote nacional",
+        internationalPackage: "Pacote internacional",
+        directOrStop: "Direto ou 1 escala",
+        oneTwoStops: "1-2 escalas",
+        carryOn: "Bagagem de mão incluída",
+        checkedBag: "Bagagem despachada disponível",
+        perPassenger: "por passageiro",
+        estimatedAirfare: "passagem estimada",
+        chooseOrigin: "Escolha sua origem para comparar passagens.",
+        selectDeparture: "Selecione a cidade de saída antes de escolher um voo.",
+        guestRating: "avaliação dos hóspedes",
+        breakfastWifi: "Café da manhã | Wi-Fi | Cancelamento grátis",
+        poolTransfer: "Piscina | Traslado | Tarifa flexível",
+        perNight: "por noite",
+        forStay: "por",
+        night: "noite",
+        selectedStay: "selecionadas",
+        bookingConfirmed: "Reserva confirmada com sucesso!",
+        tripDetails: "Detalhes da viagem",
+        route: "Rota",
+        passengers: "Passageiros",
+        hotel: "Hotel",
+        dates: "Datas",
+        stay: "Estadia",
+        to: "para",
+        priceSummary: "Resumo de preços",
+        airfare: "Passagem ida e volta",
+        hotelStay: "Hospedagem",
+        taxes: "Taxas e impostos estimados",
+        totalDue: "Total a pagar hoje"
     }
 };
 
@@ -38,16 +120,45 @@ const translations = {
    HELPERS
 ====================================================== */
 const getLanguage = () =>
-    localStorage.getItem(LANGUAGE_KEY) || 'en';
+    translations[localStorage.getItem(LANGUAGE_KEY)] ? localStorage.getItem(LANGUAGE_KEY) : 'en';
+
+const getTranslations = () =>
+    translations[getLanguage()] || translations.en;
+
+const getPassengers = () =>
+    Math.max(1, Number(localStorage.getItem(PASSENGERS_KEY)) || 1);
+
+const getCabin = () =>
+    localStorage.getItem(CABIN_KEY) || 'Economy';
+
+function getCabinMultiplier() {
+    const cabin = getCabin();
+
+    if (cabin === 'Business') return 2.2;
+    if (cabin === 'Premium Economy') return 1.45;
+    return 1;
+}
+
+function getNights() {
+    const inD = localStorage.getItem(CHECKIN_KEY);
+    const outD = localStorage.getItem(CHECKOUT_KEY);
+
+    if (!inD || !outD) return 1;
+
+    const nights = (new Date(outD) - new Date(inD)) / 86400000;
+    return nights > 0 ? nights : 1;
+}
+
+function getDestinationImage(destination) {
+    return [...destinations.national, ...destinations.international]
+        .find(d => d.name === destination)?.image;
+}
 
 /* ======================================================
    TRANSLATION UI
 ====================================================== */
 function applyTranslations() {
-    const lang = getLanguage();
-    const t = translations[lang];
-
-    if (!t) return;
+    const t = getTranslations();
 
     /* DESTINATIONS TITLE (mais seguro) */
     const title = document.getElementById('destinations-title');
@@ -92,7 +203,7 @@ function populateOrigins() {
     el.innerHTML = '';
 
     const placeholder = document.createElement('option');
-    placeholder.textContent = translations[getLanguage()].selectOrigin;
+    placeholder.textContent = getTranslations().selectOrigin;
     placeholder.value = '';
     placeholder.disabled = true;
     placeholder.selected = !saved;
@@ -112,6 +223,17 @@ function populateOrigins() {
         displayRoute();
     });
 }
+
+/* ======================================================
+   HAMBURGUER MENU
+====================================================== */
+
+const menuToggle = document.querySelector("#menu-toggle");
+const nav = document.querySelector(".main-nav");
+
+menuToggle?.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
 
 /* ======================================================
    FLIGHT PRICE
@@ -165,24 +287,35 @@ function renderCards() {
     const origin = localStorage.getItem(ORIGIN_KEY);
     const selected = localStorage.getItem(DESTINATION_KEY);
 
-    const createCard = d => {
+    const createCard = (d, type) => {
 
+        const t = getTranslations();
         const price = origin ? getFlightPrice(origin, d.name) : null;
+        const passengerTotal = price ? price * getPassengers() * getCabinMultiplier() : null;
+        const duration = type === 'national' ? t.directOrStop : t.oneTwoStops;
+        const baggage = type === 'national' ? t.carryOn : t.checkedBag;
 
         return `
-        <div class="card ${selected === d.name ? 'selected' : ''}">
+        <div class="card destination-card ${selected === d.name ? 'selected' : ''}">
             <img src="${d.image}" alt="${d.name}">
-            <h3>${d.name}</h3>
-            ${price ? `<p>${formatPrice(price)}</p>` : ''}
+            <div class="card-body">
+                <span class="card-tag">${type === 'national' ? t.domesticPackage : t.internationalPackage}</span>
+                <h3>${d.name}</h3>
+                <p class="card-meta">${duration} | ${baggage}</p>
+                ${price ? `
+                    <p class="price-line">${formatPrice(price)} <span>${t.perPassenger}</span></p>
+                    <p class="total-line">${formatPrice(passengerTotal)} ${t.estimatedAirfare}</p>
+                ` : `<p class="muted">${t.chooseOrigin}</p>`}
+            </div>
             <button class="select-destination">
-                ${selected === d.name ? 'Selected' : 'Select'}
+                ${selected === d.name ? t.selected : t.chooseFlight}
             </button>
         </div>
         `;
     };
 
-    natGrid.innerHTML = destinations.national.map(createCard).join('');
-    intlGrid.innerHTML = destinations.international.map(createCard).join('');
+    natGrid.innerHTML = destinations.national.map(d => createCard(d, 'national')).join('');
+    intlGrid.innerHTML = destinations.international.map(d => createCard(d, 'international')).join('');
 
     setupDestinationButtons();
 }
@@ -198,6 +331,12 @@ function setupDestinationButtons() {
 
             const card = e.target.closest('.card');
             const name = card.querySelector('h3').textContent;
+            const origin = localStorage.getItem(ORIGIN_KEY);
+
+            if (!origin) {
+                alert(getTranslations().selectDeparture);
+                return;
+            }
 
             localStorage.setItem(DESTINATION_KEY, name);
 
@@ -218,6 +357,20 @@ function displayCurrentDestination() {
         localStorage.getItem(DESTINATION_KEY) || '-';
 }
 
+import { destinations } from "./data.js";
+
+async function loadData() {
+  try {
+    destinations.forEach(dest => {
+      console.log(dest.name);
+    });
+  } catch (error) {
+    console.error("Failed to load data", error);
+  }
+}
+
+loadData();
+
 /* ======================================================
    ACCOMMODATIONS
 ====================================================== */
@@ -230,7 +383,7 @@ function renderAccommodations() {
 
     if (!dest) {
         grid.innerHTML =
-            translations[getLanguage()].noAccommodations;
+            getTranslations().noAccommodations;
         return;
     }
 
@@ -239,16 +392,30 @@ function renderAccommodations() {
         ...accommodations.international
     ].filter(a => a.destination === dest);
 
-    grid.innerHTML = list.map(a => `
-        <div class="card">
+    grid.innerHTML = list.map((a, index) => {
+        const t = getTranslations();
+        const rating = (4.2 + (index % 3) * 0.3).toFixed(1);
+        const amenities = index % 2 === 0
+            ? t.breakfastWifi
+            : t.poolTransfer;
+        const nightLabel = getNights() > 1 ? t.nights : t.night;
+
+        return `
+        <div class="card hotel-card">
             <img src="${a.image}" alt="${a.name}">
-            <h3>${a.name}</h3>
-            <p>${formatPrice(a.pricePerNight)}</p>
+            <div class="card-body">
+                <span class="card-tag">${rating} ${t.guestRating}</span>
+                <h3>${a.name}</h3>
+                <p class="card-meta">${amenities}</p>
+                <p class="price-line">${formatPrice(a.pricePerNight)} <span>${t.perNight}</span></p>
+                <p class="total-line">${formatPrice(a.pricePerNight * getNights())} ${t.forStay} ${getNights()} ${nightLabel}</p>
+            </div>
             <button class="choose-accommodation">
-                Select
+                ${t.chooseHotel}
             </button>
         </div>
-    `).join('');
+        `;
+    }).join('');
 
     setupAccommodationButtons();
 }
@@ -315,11 +482,11 @@ function displayStay() {
         return;
     }
 
-    const nights =
-        (new Date(outD) - new Date(inD)) / 86400000;
+    const nights = getNights();
+    const t = getTranslations();
 
     el.textContent =
-        `${nights} ${translations[getLanguage()].nights}`;
+        `${nights} ${t.nights} ${t.selectedStay}`;
 }
 
 /* ======================================================
@@ -345,7 +512,7 @@ function setupBookingButton() {
     if (!btn || !msg) return;
 
     btn.addEventListener('click', () => {
-        msg.textContent = 'Booking confirmed successfully!';
+        msg.textContent = getTranslations().bookingConfirmed;
     });
 }
 
@@ -363,31 +530,102 @@ function renderTripSummary() {
     const destination = localStorage.getItem(DESTINATION_KEY);
     const accommodation = localStorage.getItem(ACCOMMODATION_KEY);
     const price = Number(localStorage.getItem(ACCOMMODATION_PRICE_KEY));
+    const passengers = getPassengers();
+    const cabin = getCabin();
 
     const checkin = localStorage.getItem(CHECKIN_KEY);
     const checkout = localStorage.getItem(CHECKOUT_KEY);
 
-    const nights =
-        checkin && checkout
-            ? (new Date(checkout) - new Date(checkin)) / 86400000
-            : 0;
+    const nights = getNights();
+    const flightPrice = origin && destination
+        ? getFlightPrice(origin, destination) * passengers * getCabinMultiplier()
+        : 0;
+    const hotelTotal = price * nights;
+    const taxes = (flightPrice + hotelTotal) * 0.12;
+    const total = flightPrice + hotelTotal + taxes;
+    const destinationImage = getDestinationImage(destination);
+    const t = getTranslations();
+    const nightLabel = nights > 1 ? t.nights : t.night;
 
     info.innerHTML = `
-        <h3>Trip Details</h3>
-        <p><strong>Origin:</strong> ${origin}</p>
-        <p><strong>Destination:</strong> ${destination}</p>
-        <p><strong>Accommodation:</strong> ${accommodation}</p>
-        <p><strong>Check-in:</strong> ${checkin}</p>
-        <p><strong>Check-out:</strong> ${checkout}</p>
+        ${destinationImage ? `<img class="summary-image" src="${destinationImage}" alt="${destination}">` : ''}
+        <h3>${t.tripDetails}</h3>
+        <p><strong>${t.route}:</strong> ${origin || '-'} ${t.to} ${destination || '-'}</p>
+        <p><strong>${t.passengers}:</strong> ${passengers} | ${cabin}</p>
+        <p><strong>${t.hotel}:</strong> ${accommodation || '-'}</p>
+        <p><strong>${t.dates}:</strong> ${checkin || '-'} ${t.to} ${checkout || '-'}</p>
+        <p><strong>${t.stay}:</strong> ${nights} ${nightLabel}</p>
     `;
 
     values.innerHTML = `
-        <h3>Price Summary</h3>
-        <p>${nights} nights</p>
-        <p>${formatPrice(price)} / night</p>
-        <p><strong>Total: ${formatPrice(price * nights)}</strong></p>
+        <h3>${t.priceSummary}</h3>
+        <p><span>${t.airfare}</span><strong>${formatPrice(flightPrice)}</strong></p>
+        <p><span>${t.hotelStay}</span><strong>${formatPrice(hotelTotal)}</strong></p>
+        <p><span>${t.taxes}</span><strong>${formatPrice(taxes)}</strong></p>
+        <p class="grand-total"><span>${t.totalDue}</span><strong>${formatPrice(total)}</strong></p>
     `;
 }
+
+function setupPreferences() {
+    const currency = document.getElementById('currency');
+    const language = document.getElementById('language');
+    const passengers = document.getElementById('passengers');
+    const cabin = document.getElementById('cabin');
+
+    if (currency) {
+        currency.value = localStorage.getItem(CURRENCY_KEY) || 'USD';
+        currency.addEventListener('change', () => {
+            localStorage.setItem(CURRENCY_KEY, currency.value);
+            renderCards();
+        });
+    }
+
+    if (language) {
+        language.value = localStorage.getItem(LANGUAGE_KEY) || 'en';
+        language.addEventListener('change', () => {
+            localStorage.setItem(LANGUAGE_KEY, language.value);
+            applyTranslations();
+            renderCards();
+            renderAccommodations();
+            renderTripSummary();
+            displayStay();
+        });
+    }
+
+    if (passengers) {
+        passengers.value = getPassengers();
+        const savePassengers = () => {
+            localStorage.setItem(PASSENGERS_KEY, passengers.value);
+            renderCards();
+        };
+
+        passengers.addEventListener('input', savePassengers);
+        passengers.addEventListener('change', savePassengers);
+    }
+
+    if (cabin) {
+        cabin.value = getCabin();
+        cabin.addEventListener('change', () => {
+            localStorage.setItem(CABIN_KEY, cabin.value);
+            renderCards();
+        });
+    }
+}
+
+/* ======================================================
+RESULTS
+====================================================== */
+const modal = document.querySelector("#confirmation-modal");
+const confirmBtn = document.querySelector("#confirm-booking");
+const closeBtn = document.querySelector("#close-modal");
+
+confirmBtn?.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeBtn?.addEventListener("click", () => {
+  modal.close();
+});
 
 /* ======================================================
    INIT
@@ -395,6 +633,7 @@ function renderTripSummary() {
 document.addEventListener('DOMContentLoaded', () => {
 
     applyTranslations();
+    setupPreferences();
     populateOrigins();
     displayRoute();
     displayStay();

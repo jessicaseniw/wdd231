@@ -8,16 +8,16 @@
     <title>Wanderly | Accommodations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse available accommodations.">
-    <meta name="author" content="Jéssica Seniw">
+    <meta name="author" content="Jessica Seniw">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="styles/wanderly-normalize.css">
     <link rel="stylesheet" href="styles/wanderly-small.css">
     <link rel="stylesheet" href="styles/wanderly-large.css">
-    <link rel="stylesheet" href="styles/wanderly-normalize.css">
 
     <!-- JavaScript -->
     <script src="scripts/data.js" defer></script>
-    <script src="scripts/wanderly.js" defer></script>
+    <script type="module" src="scripts/wanderly.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +31,16 @@
             <h1>Wanderly</h1>
         </div>
 
+        <button id="menu-toggle" aria-label="Open navigation menu">
+        ☰
+        </button>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="wanderly.html">Destinations</a></li>
-                <li><a href="accommodations.html" class="active">Accommodations</a></li>
-                <li><a href="trips.html">My Trips</a></li>
+                <li><a href="wanderly.html">Flights</a></li>
+                <li><a href="accommodations.html" class="active">Hotels</a></li>
+                <li><a href="trips.html">Checkout</a></li>
             </ul>
         </nav>
 
@@ -46,21 +50,21 @@
     </header>
 
     <section class="booking-steps">
-        <div class="step completed">1. Destination</div>
-        <div class="step active" aria-current="step"> 2. Accommodation</div>
-        <div class="step">3. Trip Summary</div>
+        <div class="step completed">1. Flights</div>
+        <div class="step active" aria-current="step">2. Hotel</div>
+        <div class="step">3. Checkout</div>
     </section>
 
     <section class="search-summary">
 
         <div class="search-info">
-            <span class="label">Selected destination</span>
+            <span class="label">Selected flight destination</span>
             <strong id="current-destination"></strong>
             <span id="stay-period"></span>
         </div>
 
         <button class="change-btn" onclick="changeDestination()">
-            ← Change destination
+            Change flight
         </button>
 
     </section>
@@ -68,11 +72,18 @@
     <main>
         <section id="accommodations">
 
-            <h2>Choose Your Accommodation</h2>
+            <h2>Choose your stay</h2>
 
             <p class="page-description">
-                Select the accommodation that best fits your trip.
+                Compare nightly prices, guest ratings, and amenities before continuing to checkout.
             </p>
+
+            <div class="hotel-filters" aria-label="Hotel filters">
+                <span>Free cancellation</span>
+                <span>Breakfast options</span>
+                <span>Central locations</span>
+                <span>Best value first</span>
+            </div>
 
             <div class="grid national-grid"></div>
 
@@ -86,3 +97,4 @@
 </body>
 
 </html>
+
