@@ -233,6 +233,10 @@ const nav = document.querySelector(".main-nav");
 
 menuToggle?.addEventListener("click", () => {
   nav.classList.toggle("open");
+  menuToggle.setAttribute(
+    "aria-expanded",
+    nav.classList.contains("open")
+  );
 });
 
 /* ======================================================
@@ -356,20 +360,6 @@ function displayCurrentDestination() {
     el.textContent =
         localStorage.getItem(DESTINATION_KEY) || '-';
 }
-
-import { destinations } from "./data.js";
-
-async function loadData() {
-  try {
-    destinations.forEach(dest => {
-      console.log(dest.name);
-    });
-  } catch (error) {
-    console.error("Failed to load data", error);
-  }
-}
-
-loadData();
 
 /* ======================================================
    ACCOMMODATIONS

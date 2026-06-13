@@ -1,22 +1,28 @@
 /* =========================================
-DESKTOP STYLES - wanderly-large.css
+WANDERLY – LARGE (DESKTOP BASE)
 ========================================= */
 
+/* =========================================
+MAIN
+========================================= */
 main {
   padding: 1.5rem 0 2.5rem;
 }
 
 /* =========================================
-HAMBURGUER MENU
+NAV (DESKTOP)
 ========================================= */
-#menu-toggle {
-  display: none;
-}
-
 .main-nav {
   display: flex;
 }
 
+#menu-toggle {
+  display: none;
+}
+
+/* =========================================
+HERO
+========================================= */
 .hero {
   width: 100%;
   min-height: 470px;
@@ -26,7 +32,7 @@ HAMBURGUER MENU
   align-items: center;
   background:
     linear-gradient(90deg, rgba(16, 38, 61, 0.9), rgba(16, 38, 61, 0.42)),
-    url("../images/search-bg.avif") center/cover;
+    url("../images/search-bg.avif") center / cover no-repeat;
 }
 
 .hero-overlay {
@@ -55,10 +61,15 @@ HAMBURGUER MENU
   color: rgba(255, 255, 255, 0.88);
 }
 
+/* =========================================
+SEARCH FORM (DESKTOP GRID)
+========================================= */
 #searchForm {
   max-width: 100%;
   display: grid;
-  grid-template-columns: minmax(220px, 1.3fr) repeat(4, minmax(140px, 1fr));
+  grid-template-columns:
+    minmax(220px, 1.3fr)
+    repeat(4, minmax(140px, 1fr));
   gap: 0.5rem;
   align-items: end;
   background: var(--surface);
@@ -88,9 +99,12 @@ HAMBURGUER MENU
   border-radius: var(--radius-md);
   padding: 0.75rem;
   color: var(--text);
-  background: white;
+  background: var(--white);
 }
 
+/* =========================================
+PAGE INTRO / TEXT
+========================================= */
 .page-intro,
 .page-description {
   max-width: 780px;
@@ -107,11 +121,14 @@ HAMBURGUER MENU
   text-align: left;
 }
 
+/* =========================================
+SEARCH SUMMARY
+========================================= */
 .search-summary {
   max-width: 1200px;
   margin: 3rem auto 1rem;
   padding: 1rem 1.5rem;
-  background: white;
+  background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   display: flex;
@@ -136,6 +153,9 @@ HAMBURGUER MENU
   font-weight: 700;
 }
 
+/* =========================================
+FILTERS
+========================================= */
 .hotel-filters {
   max-width: 1200px;
   margin: 0 auto 1.5rem;
@@ -155,6 +175,9 @@ HAMBURGUER MENU
   font-size: 0.9rem;
 }
 
+/* =========================================
+GRIDS
+========================================= */
 .grid {
   display: grid;
   gap: 2rem;
@@ -168,16 +191,17 @@ HAMBURGUER MENU
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* =========================================
+CARDS
+========================================= */
 .card {
-  background: white;
+  background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  text-align: left;
   box-shadow: var(--shadow-md);
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .card img {
@@ -231,7 +255,7 @@ HAMBURGUER MENU
   margin: 1rem;
   border-radius: var(--radius-md);
   background: var(--primary);
-  color: white;
+  color: var(--white);
   padding: 0.75rem 1rem;
   font-weight: 700;
 }
@@ -244,16 +268,22 @@ HAMBURGUER MENU
   border: 2px solid var(--secondary);
 }
 
+/* =========================================
+ROUTE / TAGS
+========================================= */
 .route-display,
 #selected-route {
   background: rgba(231, 111, 81, 0.95);
-  color: white;
+  color: var(--white);
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 700;
 }
 
+/* =========================================
+TRIP SUMMARY
+========================================= */
 #trip-summary {
   max-width: 1200px;
   margin: 2rem auto;
@@ -291,6 +321,9 @@ HAMBURGUER MENU
   font-size: 1.2rem;
 }
 
+/* =========================================
+ACTIONS
+========================================= */
 .trip-actions {
   max-width: 1200px;
   margin: 0 auto 1rem;
@@ -320,6 +353,9 @@ HAMBURGUER MENU
   color: var(--primary);
 }
 
+/* =========================================
+MESSAGES
+========================================= */
 #booking-message {
   max-width: 1200px;
   margin: 1rem auto;

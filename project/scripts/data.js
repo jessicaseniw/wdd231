@@ -45,11 +45,6 @@ const destinations = {
     ]
 };
 
-export const destinations = [
-  { name: "Rio de Janeiro", price: 350 },
-  { name: "New York", price: 820 }
-];
-
 /* ======================================================
    ACCOMMODATIONS
 ====================================================== */
@@ -158,4 +153,3 @@ const accommodations = {
         { name: 'Bondi Beach Resort', destination: 'Sydney, Australia', image: 'images/hotel/international/hotel-sydney3.avif', pricePerNight: 180 }
     ]
 };
-
