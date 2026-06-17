@@ -474,7 +474,7 @@ dialog button {
 
 .application-summary h2 {
     background: none;
-    color: var(--darkblue2);
+    color: var(--text-color);
     padding: 0;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -670,7 +670,7 @@ dialog button {
   margin: 0;
   padding: 0 1rem 0.75rem;
   font-size: 0.95rem;
-  color: var(--text-soft);
+  color: var(--primary-color);
 }
 
 /* ADDRESS */
