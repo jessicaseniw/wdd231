@@ -677,7 +677,7 @@ dialog button {
 .discover-card address {
   font-style: normal;
   font-size: 0.85rem;
-  color: white;
+  color: var(--text-muted);
   padding: 0 1rem 0.75rem;
 }
 
@@ -809,7 +809,7 @@ dialog button {
     padding: 0.9rem 1rem 0.25rem;
     font-size: 1.2rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-color);
   }
 
   /* ================= BACK CONTENT (VISIBLE ONLY MOBILE) ================= */
