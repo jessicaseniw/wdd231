@@ -528,7 +528,7 @@ dialog button {
     rgba(15, 23, 42, 0.55) 100%
   );
 
-  color: rgb(248, 250, 252);
+  color: var(--secondary-color);
 
   padding: 2rem 2.25rem;
 
