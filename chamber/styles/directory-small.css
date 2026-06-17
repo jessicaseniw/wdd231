@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
 
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.451);
 
     color: white;
     text-align: center;
@@ -36,7 +36,7 @@
 }
 
 .cta-button {
-    background-color: #0f3ea8;
+    background-color: var(--darkblue);
     color: white;
     text-decoration: none;
 
@@ -58,7 +58,7 @@
     width: 44px;
     height: 44px;
     background-color: transparent;
-    border: 1px solid #cbd5f5;
+    border: 1px solid rgb(203, 213, 245);
     border-radius: 6px;
     cursor: pointer;
 
@@ -73,8 +73,8 @@
 }
 
 .view-buttons button.active {
-    background-color: #e5e7eb;
-    outline: 2px solid #0f172a;
+    background-color: var(--secondary-color);
+    outline: 2px solid var(--darkblue2);
 }
 
 /* ================= Directory Page ================= */
@@ -91,7 +91,7 @@
 }
 
 .member-card {
-    background-color: #e5e7eb;
+    background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
@@ -120,7 +120,7 @@
 }
 
 .member-card a {
-    color: #0f172a;
+    color: var(--darkblue2);
     font-weight: 600;
 }
 
@@ -143,7 +143,7 @@
 /* ================= WEATHER ================= */
 
 .weather-card {
-    background-color: #e5e7eb;
+    background-color: var(--secondary-color);
     border-radius: 12px;
     padding: 2rem;
 
@@ -178,7 +178,7 @@
 #weatherDescription {
     text-transform: capitalize;
     font-size: 0.95rem;
-    color: #334155;
+    color: var(--text-muted);
     margin-top: 0.25rem;
 }
 
@@ -194,7 +194,7 @@
 
 .community-card,
 .spotlight-card {
-    background-color: #e5e7eb;
+    background-color: var(--secondary-color);
     border-radius: 12px;
     padding: 2rem;
 }
@@ -239,7 +239,7 @@
 
 .community-card a {
     display: inline-block;
-    background-color: #0f3ea8;
+    background-color: var(--darkblue);
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -294,13 +294,13 @@
 }
 
 #spotlights .business a {
-    color: #0f3ea8;
+    color: var(--darkblue);
     font-weight: 600;
     text-decoration: none;
 }
 
 #spotlights .business+.business {
-    border-top: 1px solid #cbd5e1;
+    border-top: 1px solid var(--border-color);
 }
 
 /* =====================================================
@@ -311,7 +311,7 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: 3px solid #0f3ea8;
+    outline: 3px solid var(--darkblue);
     outline-offset: 2px;
 }
 
@@ -353,14 +353,14 @@ button:focus {
 .form-group textarea {
     width: 100%;
     padding: .85rem;
-    border: 1px solid #cbd5e1;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 1rem;
     box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #0f3ea8;
+    background-color: var(--darkblue);
     color: white;
     border: none;
     border-radius: 8px;
@@ -385,7 +385,7 @@ input[type="submit"]:hover {
 }
 
 .membership-card button {
-    background-color: #0f3ea8;
+    background-color: var(--darkblue);
     color: white;
     border: none;
     border-radius: 6px;
@@ -428,7 +428,7 @@ dialog button {
 }
 
 .membership-card {
-    background: #e5e7eb;
+    background: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
@@ -466,7 +466,7 @@ dialog button {
 }
 
 .application-summary {
-    background-color: #e5e7eb;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
@@ -474,7 +474,7 @@ dialog button {
 
 .application-summary h2 {
     background: none;
-    color: #0f172a;
+    color: var(--darkblue2);
     padding: 0;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -483,7 +483,7 @@ dialog button {
 .application-summary p {
     padding: .75rem 0;
     margin: 0;
-    border-bottom: 1px solid #cbd5e1;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .application-summary p:last-child {
@@ -528,7 +528,7 @@ dialog button {
     rgba(15, 23, 42, 0.55) 100%
   );
 
-  color: #f8fafc;
+  color: rgb(248, 250, 252);
 
   padding: 2rem 2.25rem;
 
@@ -552,14 +552,14 @@ dialog button {
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #38bdf8;
+  color: var(--title-color);
 }
 
 .sidebar-overlay p {
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 520px;
-  color: #e5e7eb;
+  color: var(--secondary-color)
 }
 
 /* ================= DEMOGRAPHIC LIST ================= */
@@ -587,7 +587,7 @@ dialog button {
   height: 18px;
   flex-shrink: 0;
 
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
 
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -628,7 +628,7 @@ dialog button {
 /* ================= MOBILE CARDS (NO ANIMATION) ================= */
 
 .discover-card {
-  background: #e5e7eb;
+  background: var(--secondary-color);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
@@ -693,8 +693,8 @@ dialog button {
   border: none;
   border-radius: 6px;
 
-  background: #0ea5e9;
-  color: #fff;
+  background: var(--primary-color);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   cursor: pointer;
 }
@@ -728,10 +728,10 @@ dialog button {
   max-width: 320px;
   padding: 1.25rem 1.5rem;
 
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--darkblue2), var(--darkblue));
+  color: rgb(255, 255, 255);
 
-  border-left: 6px solid #38bdf8;
+  border-left: 6px solid var(--title-color);
   border-radius: 12px;
 
   font-size: 0.95rem;
@@ -783,7 +783,7 @@ dialog button {
   }
 
   .discover-card {
-    background: #e5e7eb;
+    background: var(--secondary-color);
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
@@ -823,21 +823,21 @@ dialog button {
 
   .card-back h3 {
     font-size: 0.95rem;
-    color: #334155;
+    color: var(--text-muted);
     font-weight: 600;
     margin: 0;
   }
 
   .card-back p {
     font-size: 0.9rem;
-    color: #475569;
+    color: var(--text-soft);
     line-height: 1.5;
     margin: 0;
   }
 
   .card-back address {
     font-size: 0.85rem;
-    color: #64748b;
+    color: var(--text-faded);
     font-style: normal;
   }
 
@@ -846,7 +846,7 @@ dialog button {
     padding: 0.65rem 1rem;
     border: none;
     border-radius: 8px;
-    background: #0f3ea8;
+    background: var(--darkblue);
     color: white;
     font-weight: 600;
     cursor: pointer;

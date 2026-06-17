@@ -8,6 +8,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: rgb(14, 165, 233);
+  --secondary-color: rgb(245, 245, 245);
+  --text-color: rgb(34, 34, 34);
+  --title-color: rgb(56, 189, 248);
+  --darkblue: rgb(15, 62, 168);
+  --darkblue2: rgb(15, 23, 42);
+  --border-color: rgb(203, 213, 225);
+  --text-muted: rgb(51, 65, 85);
+  --text-soft: rgb(71, 85, 105);
+  --text-faded: rgb(100, 116, 139);
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
