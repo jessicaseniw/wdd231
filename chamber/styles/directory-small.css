@@ -650,7 +650,7 @@ dialog button {
   font-size: 1.1rem;
   margin: 0;
   padding: 0.75rem 1rem 0.25rem;
-  color: white;
+  color: var(--text-color);
 }
 
 .visually-hidden {
@@ -670,7 +670,7 @@ dialog button {
   margin: 0;
   padding: 0 1rem 0.75rem;
   font-size: 0.95rem;
-  color: white;
+  color: var(--text-soft);
 }
 
 /* ADDRESS */
