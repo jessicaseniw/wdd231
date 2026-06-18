@@ -522,6 +522,11 @@ h2 {
     color: #ffffff;
 }
 
+.sidebar-overlay h3,
+.sidebar-overlay p {
+  color: #ffffff;
+}
+
 /* ================= HERO ================= */
 
 .sidebar-hero {
