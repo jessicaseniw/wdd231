@@ -510,14 +510,6 @@ dialog button {
     color: var(--border-color) !important;
 }
 
-section h2 {
-    color: var(--darkblue2) !important;
-}
-
-h2 {
-    color: var(--darkblue2) !important;
-}
-
 .sidebar-overlay h2 {
     color: #ffffff;
 }
@@ -856,7 +848,7 @@ h2 {
 
   .card-back p {
     font-size: 0.9rem;
-    color: var(--text-soft);
+    color: var(--secondary-color);
     line-height: 1.5;
     margin: 0;
   }
