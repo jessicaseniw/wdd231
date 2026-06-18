@@ -812,12 +812,12 @@ dialog button {
     color: white;
   }
 
-  .discover-card h2,
-    .sidebar-overlay h2,
-    .community-card h2,
-    .spotlight-card h2 {
+  .discover-grid h2,
+  .sidebar h2,
+  .sidebar-overlay h2,
+  .gallery h2 {
     color: var(--darkblue2);
-    }
+  }
 
   /* ================= BACK CONTENT (VISIBLE ONLY MOBILE) ================= */
   .card-back {
