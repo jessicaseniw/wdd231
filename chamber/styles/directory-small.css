@@ -507,7 +507,7 @@ dialog button {
 .sidebar h2,
 .sidebar-overlay h2,
 .gallery h2 {
-    color: var(--darkblue2) !important;
+    color: var(--border-color) !important;
 }
 
 section h2 {
